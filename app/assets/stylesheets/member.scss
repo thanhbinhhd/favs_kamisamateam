@@ -1,0 +1,7 @@
+.js-view-guest, .js-view-member {
+  display: none !important;
+}
+
+.is-guest .js-view-guest, .is-member .js-view-member {
+  display: block !important;
+}
