@@ -16,5 +16,7 @@
 <p class="sec-disc">お求めやすい少量パック。1人暮らしの方にも最適。</p>
 <%= render "pages/small_pack_new" %>
 <div class="top-c-singleBtn">
-  <a href="#" class="button button-main">今すぐサインアップ!</a>
+  <%= link_to new_user_registration_path, class: "button button-main" do %>
+    <%= t "sign-up-now" %>
+  <% end %>
 </div>
