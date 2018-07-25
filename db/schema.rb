@@ -69,6 +69,7 @@ ActiveRecord::Schema.define(version: 2018_07_25_022422) do
   create_table "products", force: :cascade do |t|
     t.string "name"
     t.string "image"
+    t.integer "category_id"
     t.string "cultivation_level"
     t.string "cultivation_method"
     t.string "nutrition_attention"

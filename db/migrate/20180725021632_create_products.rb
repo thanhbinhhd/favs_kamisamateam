@@ -3,6 +3,7 @@ class CreateProducts < ActiveRecord::Migration[5.2]
     create_table :products do |t|
       t.string :name
       t.string :image
+      t.integer :category_id
       t.string :cultivation_level
       t.string :cultivation_method
       t.string :nutrition_attention
