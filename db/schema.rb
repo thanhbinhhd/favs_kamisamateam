@@ -10,7 +10,81 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_07_24_085115) do
+ActiveRecord::Schema.define(version: 2018_07_25_022422) do
+
+  create_table "activities", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "post_id"
+    t.string "activitype"
+    t.integer "type"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "categories", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "comments", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "post_id"
+    t.string "content"
+    t.integer "parent_id"
+    t.integer "reply_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "foods", force: :cascade do |t|
+    t.string "name"
+    t.string "image"
+    t.string "detail"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "posts", force: :cascade do |t|
+    t.string "title"
+    t.integer "user_id"
+    t.string "image"
+    t.string "content"
+    t.string "product_quantity"
+    t.integer "cost"
+    t.integer "comment_number"
+    t.integer "like_number"
+    t.string "video"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "product_vitamins", force: :cascade do |t|
+    t.integer "vitamin_id"
+    t.integer "product_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "products", force: :cascade do |t|
+    t.string "name"
+    t.string "image"
+    t.string "cultivation_level"
+    t.string "cultivation_method"
+    t.string "nutrition_attention"
+    t.string "nutrition_detail"
+    t.string "preservation_detail"
+    t.string "preservation_short"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "recipes", force: :cascade do |t|
+    t.string "attention"
+    t.string "detail"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "name"
@@ -36,6 +110,12 @@ ActiveRecord::Schema.define(version: 2018_07_24_085115) do
     t.string "last_sign_in_ip"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+  end
+
+  create_table "vitamins", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
 end
