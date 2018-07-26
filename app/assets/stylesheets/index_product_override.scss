@@ -1,0 +1,613 @@
+@charset "UTF-8";
+
+/* start crops css modify */
+.mod-hero {
+  position: relative;
+  margin: -15px -10px 0;
+  height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.area-header .mod-hero {
+  margin: 0;
+}
+.mod-hero-figure {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.mod-hero-figure img {
+  min-height: 360px;
+  height: 100%;
+  max-width: 600%;
+  width: auto;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.mod-hero-head {
+  position: relative;
+  z-index: 1;
+}
+/* end crops css modify */
+
+.service-status {
+  display: none!important;
+}
+.is-oldWin .mod-scale-bar {
+  display: inline-table;
+}
+
+.is-oldWin .mod-scale-bar-item {
+  min-width: 6em;
+  display: table-cell;
+}
+
+
+/* webfont IE display issue #SF-1913 */
+@font-face {
+  .is-oldWin {
+    font-family: 'ragri-icons';
+    src: url("/farm/app/assets/common/fonts/ragri-icons.ttf?lsd4x4") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+  }
+}
+
+.is-oldWin [class^="icon-"], .is-oldWin [class*=" icon-"],
+.is-oldWin .button-menu,
+.is-oldWin .button-close,
+.is-oldWin .button-back,
+.is-oldWin .button-next {
+  font-family: none !important;
+}
+
+.is-oldWin [class^="icon-"]:before, .is-oldWin [class*=" icon-"]:before,
+.is-oldWin .button-menu:before,
+.is-oldWin .button-close:before,
+.is-oldWin .button-back:before,
+.is-oldWin .button-next:before {
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-image: url(https://agriculture.rakuten.co.jp/farm/assets/common/img/sprite.svg);
+  content: '';
+}
+
+.is-oldWin .media-comingsoon .figure-noimage:before, .is-oldWin .link-zoom:before, .is-oldWin .status-marked:before, .is-oldWin .button-close:before, .is-oldWin .button-menu-close:before, .is-oldWin .button-menu.is-active:before, .is-oldWin button.mfp-close:before, .is-oldWin .mfp-arrow:before, .is-oldWin .button-back:before, .is-oldWin .button-next:before, .is-oldWin .button-menu:before, .is-oldWin .form-text-ok:before, .is-oldWin .is-valid:after, .is-oldWin .mod-sns .mod-sns-twitter:before, .is-oldWin .mod-sns .mod-sns-facebook:before, .is-oldWin .mod-phase .mod-phase-fill:before, .is-oldWin .mod-phase .mod-phase-blank:before, .is-oldWin .mod-phase .mod-phase-blank:before, .is-oldWin .mod-sign-figure .mod-job-remove:before, .is-oldWin .icon-payment2:before, .is-oldWin .mod-steps .mod-steps-item.is-active .icon-payment:before, .is-oldWin .mod-steps .mod-steps-item.is-active .icon-payment:before, .is-oldWin .icon-farmer2:before, .is-oldWin .mod-steps .mod-steps-item.is-active .icon-farmer:before, .is-oldWin .mod-steps .mod-steps-item.is-active .icon-farmer:before, .is-oldWin .icon-plant2:before, .is-oldWin .mod-steps .mod-steps-item.is-active .icon-plant:before, .is-oldWin .media-comingsoon .figure-noimage:before, .is-oldWin .mod-steps .mod-steps-item.is-active .icon-plant:before, .is-oldWin .mod-steps .mod-steps-item.is-active .media-comingsoon .figure-noimage:before, .is-oldWin .media-comingsoon .mod-steps .mod-steps-item.is-active .figure-noimage:before, .is-oldWin .icon-box2:before, .is-oldWin .mod-steps .mod-steps-item.is-active .icon-box:before, .is-oldWin .mod-steps .mod-steps-item.is-active .icon-box:before, .is-oldWin .icon-check2:before, .is-oldWin .mod-steps .mod-steps-item.is-active .icon-check:before, .is-oldWin .mod-steps .mod-steps-item.is-active .icon-check:before, .is-oldWin .icon-delivery2:before, .is-oldWin .mod-steps .mod-steps-item.is-active .icon-delivery:before, .is-oldWin .mod-steps .mod-steps-item.is-active .icon-delivery:before, .is-oldWin .icon-instruction2:before, .is-oldWin .mod-nav-function > ul > .mod-nav-item.is-active .mod-nav-head .icon-instruction:before, .is-oldWin .icon-picture2:before, .is-oldWin .mod-nav-function > ul > .mod-nav-item.is-active .mod-nav-head .icon-picture:before, .is-oldWin .icon-history2:before, .is-oldWin .mod-nav-function > ul > .mod-nav-item.is-active .mod-nav-head .icon-history:before, .is-oldWin .icon-chat2:before, .is-oldWin .mod-nav-function > ul > .mod-nav-item.is-active .mod-nav-head .icon-chat:before, .is-oldWin .icon-config2:before, .is-oldWin .mod-nav-function > ul > .mod-nav-item.is-active .mod-nav-head .icon-config:before {
+  font-family: none !important;
+  font-size: 0;
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-image: url(https://agriculture.rakuten.co.jp/farm/assets/common/img/sprite.svg);
+  content: '';
+}
+
+.is-oldWin .media-comingsoon .figure-noimage {
+  opacity: 0.8;
+}
+
+.is-oldWin .media-comingsoon .figure-noimage:before {
+  -webkit-transform: scale(2);
+  -ms-transform: scale(2);
+  transform: scale(2);
+  position: absolute;
+  top: 65%;
+  left: 59%;
+}
+
+.is-oldWin .media-comingsoon .figure-noimage:after {
+  border-color: #fff;
+}
+
+.is-oldWin .top-section-linknavi .top-boxsize [class*="top-producer-linknavi0"] .link-box-head:after {
+  background: none;
+  display: none;
+}
+
+.is-oldWin .mod-heading-figure .icon-home {
+  margin-right: 5px;
+  margin-top: -6px;
+  position: relative;
+}
+
+.is-oldWin .mod-phase .mod-phase-fill, .is-oldWin .mod-phase .mod-phase-blank {
+  margin-right: 3px;
+}
+
+.is-oldWin .mod-phase .mod-phase-blank {
+  opacity: 0.3;
+}
+
+.is-oldWin .icon-payment:before {
+  width: 20px;
+  height: 20px;
+  background-position: 0 0;
+}
+
+.is-oldWin .icon-payment2:before, .is-oldWin .mod-steps .mod-steps-item.is-active .icon-payment:before {
+  width: 20px;
+  height: 20px;
+  background-position: -30px 0;
+}
+
+.is-oldWin .icon-account:before {
+  width: 20px;
+  height: 20px;
+  background-position: -60px 0;
+}
+
+.is-oldWin .icon-account2:before {
+  width: 20px;
+  height: 20px;
+  background-position: -90px 0;
+}
+
+.is-oldWin .icon-box:before {
+  width: 20px;
+  height: 20px;
+  background-position: -120px 0;
+}
+
+.is-oldWin .icon-box2:before, .is-oldWin .mod-steps .mod-steps-item.is-active .icon-box:before {
+  width: 20px;
+  height: 20px;
+  background-position: -150px 0;
+}
+
+.is-oldWin .icon-check:before {
+  width: 20px;
+  height: 20px;
+  background-position: -180px 0;
+}
+
+.is-oldWin .icon-check2:before, .is-oldWin .mod-steps .mod-steps-item.is-active .icon-check:before {
+  width: 20px;
+  height: 20px;
+  background-position: -210px 0;
+}
+
+.is-oldWin .icon-delivery:before {
+  width: 20px;
+  height: 20px;
+  background-position: -240px 0;
+}
+
+.is-oldWin .icon-delivery2:before, .is-oldWin .mod-steps .mod-steps-item.is-active .icon-delivery:before {
+  width: 20px;
+  height: 20px;
+  background-position: -270px 0;
+}
+
+.is-oldWin .icon-farmer:before {
+  width: 20px;
+  height: 20px;
+  background-position: 0 -30px;
+}
+
+.is-oldWin .icon-farmer2:before, .is-oldWin .mod-steps .mod-steps-item.is-active .icon-farmer:before {
+  width: 20px;
+  height: 20px;
+  background-position: -30px -30px;
+}
+
+.is-oldWin .icon-flag:before, .is-oldWin .status-marked:before {
+  width: 20px;
+  height: 20px;
+  background-position: -60px -30px;
+  -webkit-transform: scale(0.6);
+      -ms-transform: scale(0.6);
+          transform: scale(0.6);
+  margin-left:-4px;
+}
+
+.is-oldWin .icon-home:before {
+  width: 20px;
+  height: 20px;
+  background-position: -90px -30px;
+}
+
+.is-oldWin .icon-ok:before, .is-oldWin .is-valid:after, .is-oldWin .form-text-ok:before {
+  width: 20px;
+  height: 20px;
+  background-position: -120px -30px;
+}
+
+.is-oldWin .icon-plant:before {
+  width: 20px;
+  height: 20px;
+  background-position: -150px -30px;
+}
+
+.is-oldWin .icon-plant2:before, .is-oldWin .mod-steps .mod-steps-item.is-active .icon-plant:before, .is-oldWin .media-comingsoon .figure-noimage:before {
+  width: 20px;
+  height: 20px;
+  background-position: -180px -30px;
+}
+
+.is-oldWin .icon-zoom:before, .is-oldWin .link-zoom:before {
+  width: 20px;
+  height: 20px;
+  background-position: -203px -24px;
+}
+
+.is-oldWin .icon-facebook:before, .is-oldWin .mod-sns-facebook:before {
+  width: 20px;
+  height: 20px;
+  background-position: -240px -30px;
+}
+
+.is-oldWin .icon-twitter:before, .is-oldWin .mod-sns-twitter:before {
+  width: 20px;
+  height: 20px;
+  background-position: -270px -30px;
+}
+
+.is-oldWin .icon-picture:before {
+  width: 20px;
+  height: 20px;
+  background-position: 0 -60px;
+}
+
+.is-oldWin .icon-picture2:before {
+  width: 20px;
+  height: 20px;
+  background-position: -30px -60px;
+}
+
+.is-oldWin .icon-leaf:before, .is-oldWin .mod-phase .mod-phase-fill:before, .is-oldWin .mod-phase .mod-phase-blank:before {
+  width: 20px;
+  height: 20px;
+  background-position: -60px -60px;
+}
+.is-oldWin .icon-up:before {
+  width: 20px;
+  height: 20px;
+  background-position: -90px -60px;
+}
+
+.is-oldWin .icon-right:before {
+  width: 20px;
+  height: 20px;
+  background-position: -120px -60px;
+}
+.is-oldWin .icon-menu:before, .is-oldWin .button-menu:before {
+  width: 20px;
+  height: 20px;
+  background-position: -210px -60px;
+}
+
+.is-oldWin .icon-mail2:before {
+  width: 20px;
+  height: 20px;
+  background-position: -240px -60px;
+}
+
+.is-oldWin .icon-mail:before {
+  width: 20px;
+  height: 20px;
+  background-position: -270px -60px;
+}
+
+.is-oldWin .icon-left:before {
+  width: 20px;
+  height: 20px;
+  background-position: 0 -90px;
+}
+
+.is-oldWin .icon-instruction2:before {
+  width: 20px;
+  height: 20px;
+  background-position: -30px -90px;
+}
+
+.is-oldWin .icon-instruction:before {
+  width: 20px;
+  height: 20px;
+  background-position: -60px -90px;
+}
+
+.is-oldWin .icon-home2:before {
+  width: 20px;
+  height: 20px;
+  background-position: -120px -90px;
+}
+
+.is-oldWin .icon-history2:before {
+  width: 20px;
+  height: 20px;
+  background-position: -150px -90px;
+}
+
+.is-oldWin .icon-history:before {
+  width: 20px;
+  height: 20px;
+  background-position: -180px -90px;
+}
+
+.is-oldWin .icon-field:before {
+  width: 20px;
+  height: 20px;
+  background-position: -210px -90px;
+}
+
+.is-oldWin .icon-cross:before, .is-oldWin .button-close:before, .is-oldWin button.mfp-close:before {
+  width: 20px;
+  height: 20px;
+  background-position: -270px -90px;
+}
+
+.is-oldWin .icon-config2:before {
+  width: 20px;
+  height: 20px;
+  background-position: 0 -120px;
+}
+
+.is-oldWin .icon-config:before {
+  width: 20px;
+  height: 20px;
+  background-position: -30px -120px;
+}
+
+.is-oldWin .icon-chat2:before {
+  width: 20px;
+  height: 20px;
+  background-position: -60px -120px;
+}
+
+.is-oldWin .icon-chat:before {
+  width: 20px;
+  height: 20px;
+  background-position: -90px -120px;
+}
+
+.is-oldWin .icon-arrow-up:before {
+  width: 20px;
+  height: 20px;
+  background-position: -120px -120px;
+}
+
+.is-oldWin .icon-arrow-right:before, .is-oldWin .button-next:before {
+  width: 20px;
+  height: 20px;
+  background-position: -150px -120px;
+}
+
+.is-oldWin .icon-arrow-left:before, .is-oldWin .button-back:before {
+  width: 20px;
+  height: 20px;
+  background-position: -180px -120px;
+}
+
+.is-oldWin .icon-arrow-down:before {
+  width: 20px;
+  height: 20px;
+  background-position: -210px -120px;
+}
+
+.is-oldWin .icon-arrow-left2:before, .is-oldWin .heading-farm .button-back:before {
+  width: 20px;
+  height: 20px;
+  background-position: -240px -120px;
+}
+
+.is-oldWin .icon-arrow-right2:before, .is-oldWin .heading-farm .button-next:before {
+  width: 20px;
+  height: 20px;
+  background-position: -270px -120px;
+}
+
+.is-oldWin .icon-cross2:before, .is-oldWin .button-menu.is-active:before, .is-oldWin .button-menu.button-menu-close:before {
+  width: 20px;
+  height: 20px;
+  background-position: 0 -150px;
+}
+
+.is-oldWin .icon-account3:before, .is-oldWin .mod-nav-top .icon-account:before {
+  width: 20px;
+  height: 20px;
+  background-position: -30px -150px;
+}
+
+.is-oldWin .icon-delivery3:before, .is-oldWin .mod-nav-top .icon-delivery:before {
+  width: 20px;
+  height: 20px;
+  background-position: -60px -150px;
+}
+
+.is-oldWin .icon-history3:before, .is-oldWin .mod-nav-top .icon-history:before {
+  width: 20px;
+  height: 20px;
+  background-position: -90px -150px;
+}
+
+.is-oldWin .list-block > li > a:after, .is-oldWin .link-block:after, .is-oldWin .link-box .link-box-head:after, .is-oldWin .mod-message-head > a:before {
+  content: "" !important;
+  width: 7px !important;
+  height: 7px !important;
+  border-top: 2px solid #999999;
+  border-right: 2px solid #999999;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  margin-top: -4px;
+  font-family: inherit !important;
+}
+
+.is-oldWin .list-block > li > a:after {
+  border-top-color: #0f9932;
+  border-right-color: #0f9932;
+}
+
+.is-oldWin .mod-message-head > a:before {
+  border-top-color: #fff;
+  border-right-color: #fff;
+}
+
+.is-oldWin .link-info:before, .is-oldWin .icon-info:before,
+.is-oldWin .link-question:before, .is-oldWin .icon-question:before {
+  content: "\00ff01" !important;
+  width: 1.1em !important;
+  height: 1.1em !important;
+  display: inline-block;
+  text-align: center;
+  border: 1px solid;
+  border-radius: 100%;
+  font-size: 0.9em !important;
+  font-weight: bold;
+  line-height: 1.1;
+  font-family: inherit !important;
+  background: none!important;
+}
+
+.is-oldWin .link-question:before, .is-oldWin .icon-question:before {
+  content: "\00ff1f" !important;
+}
+
+/*.is-oldWin .link-info:before,
+.is-oldWin .link-question:before {
+  line-height: 1.5;
+}*/
+
+.is-oldWin .link-box .link-box-head:after {
+  -webkit-transform: rotate(135deg);
+  -ms-transform: rotate(135deg);
+  transform: rotate(135deg);
+}
+
+.is-oldWin .link-box .link-box-head:after {
+  -webkit-transform: rotate(135deg);
+  -ms-transform: rotate(135deg);
+  transform: rotate(135deg);
+}
+
+.is-oldWin .link-box.is-active .link-box-head:after {
+  -webkit-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+.is-oldWin .link-box .link-box-head.is-active:after {
+  -webkit-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+.is-oldWin .mod-fert-list-item:after, .is-oldWin .mod-water-list-item:after {
+  content: "";
+  width: 7px;
+  height: 7px;
+  border-top: 2px solid #999;
+  border-right: 2px solid #999;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  margin-top: -4px;
+  font-family: inherit !important;
+}
+
+.is-oldWin .mod-water-list-item:after {
+  border-top-color: #1eb9e6;
+  border-right-color: #1eb9e6;
+}
+
+.is-oldWin .mod-fert-list-item:after {
+  border-top-color: #af8a54;
+  border-right-color: #af8a54;
+}
+
+.is-oldWin .mod-field-status-current {
+  position: absolute;
+  top: -2.2em;
+  display: inline-block;
+  color: #fff;
+  font-weight: 700;
+  width: 2em;
+  height: 2em;
+  font-size: 14px;
+  z-index: 2;
+  border-radius: 100%;
+}
+
+.is-oldWin .mod-field-status-current:before {
+  position: absolute;
+  bottom: -1.5em;
+  left: 50%;
+  margin-left: -.8em;
+  content: "";
+  display: inline-block;
+  border-width: 1em .8em;
+  border-style: solid;
+  border-color: transparent;
+  z-index: 1;
+  font-size: 14px;
+}
+
+.is-oldWin .mod-field-status-water .mod-field-status-current {
+  background-color: #1eb9e6;
+}
+
+.is-oldWin .mod-field-status-water .mod-field-status-current:before {
+  border-top-color: #1eb9e6;
+}
+
+.is-oldWin .mod-field-status-fert .mod-field-status-current {
+  background-color: #af8a54;
+}
+
+.is-oldWin .mod-field-status-fert .mod-field-status-current:before {
+  border-top-color: #af8a54;
+}
+
+.is-oldWin .mod-field-status-weed .mod-field-status-current {
+  background-color: #0f9932;
+}
+
+.is-oldWin .mod-field-status-weed .mod-field-status-current:before {
+  border-top-color: #0f9932;
+}
+
+.is-oldWin .mod-field-status-current-value {
+  position: absolute;
+  display: inline-block;
+  top: .5em;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  z-index: 3;
+  font-size: 12px;
+}
+
+
+.cropsslide-wrap{
+  margin-bottom: 15px;
+}
+
+
+
+/* release 0702 ロゴ変更対応 */
+/* new service main color #00b900 */
+
+#header{
+  border-bottom: 2px solid #00b900 !important;
+}

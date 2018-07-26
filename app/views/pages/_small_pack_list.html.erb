@@ -1,14 +1,15 @@
 <div class="top-c-cropsMenu">
   <ul class="cropsMenuList">
     <li>
-      <a href="https://agriculture.rakuten.co.jp/farm/app/contractField/crops/?l-id=top-listmenu_crops">
+      <a href="#">
         <div class="imgWrap">
-          <%= image_tag("crops_icon") %>
+          <%= link_to image_tag("crops_icon"), products_path(@products) %>
         </div>
         <div class="txtWrap">
-          作物リストをみる
+          <b>作物リストをみる</b>
         </div>
       </a>
+
     </li>
     <li>
       <a href="https://agriculture.rakuten.co.jp/farm/connect/farmers?l-id=top-listmenu_farmersList">
