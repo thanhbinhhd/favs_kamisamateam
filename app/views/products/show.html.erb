@@ -1,0 +1,163 @@
+<%= render "pages/top" %>
+<div class="area-contents">
+  <header class="area-header">
+    <div class="media-vertical media-thumb">
+      <figure class="media-object">
+        <div class="image-name"><%= image_name = @product.image %></div>
+        <%= image_tag(image_name) %>
+        <figcaption class="media-caption"><b><%= @product.name %></b>
+        </figcaption>
+      </figure>
+    </div>
+    <p>7月は気温が高いので、種まきから収穫までの周期が早いシーズンです。虫くいが多い時期なので収穫量に影響が出ることもあります。</p>
+  </header>
+  <section>
+    <div class="section-content-divide">
+      <h2 class="title center">小松菜のレシピ
+      </h2>
+      <h3 class="title-sub center">クセがなく、下ゆで不要！離乳食にも。
+      </h3>
+      <ul class="row3 media-list">
+        <li class="col">
+          <div class="media-vertical"><a class="link-zoom js-modal" href="#modal1">
+              <figure class="media-object">
+                <figure class="figure-thumb-fixed">
+                  <div class="figure-thumb-fixed-inner" style="background-image:url(//jp.rakuten-static.com/recipe-space/d/strg/ctrl/3/d9c111795f391503707b12dd0482a7b9fa44d26b.88.2.3.2.jpg);"><img alt="クルミ味噌和え" src="//jp.rakuten-static.com/recipe-space/d/strg/ctrl/3/d9c111795f391503707b12dd0482a7b9fa44d26b.88.2.3.2.jpg"></div>
+                </figure>
+              </figure></a>
+          </div>
+          <div class="title-sub center">クルミ味噌和え</div>
+        </li>
+        <li class="col">
+          <div class="media-vertical"><a class="link-zoom js-modal" href="#modal2">
+              <figure class="media-object">
+                <figure class="figure-thumb-fixed">
+                  <div class="figure-thumb-fixed-inner" style="background-image:url(//jp.rakuten-static.com/recipe-space/d/strg/ctrl/3/aacf37ac44bce57904d66081242d0abad03f413c.32.2.3.2.jpg);"><img alt="クリームパスタ" src="//jp.rakuten-static.com/recipe-space/d/strg/ctrl/3/aacf37ac44bce57904d66081242d0abad03f413c.32.2.3.2.jpg"></div>
+                </figure>
+              </figure></a>
+          </div>
+          <div class="title-sub center">クリームパスタ</div>
+        </li>
+        <li class="col">
+          <div class="media-vertical"><a class="link-zoom js-modal" href="#modal3">
+              <figure class="media-object">
+                <figure class="figure-thumb-fixed">
+                  <div class="figure-thumb-fixed-inner" style="background-image:url(//jp.rakuten-static.com/recipe-space/d/strg/ctrl/3/53cd29f80892e8cfdc200de21ed820fda098d56b.92.2.3.2.jpg);"><img alt="スムージー" src="//jp.rakuten-static.com/recipe-space/d/strg/ctrl/3/53cd29f80892e8cfdc200de21ed820fda098d56b.92.2.3.2.jpg"></div>
+                </figure>
+              </figure></a>
+          </div>
+          <div class="title-sub center">スムージー</div>
+        </li>
+      </ul>
+      <p>煮ても、焼いても美味しい！味噌汁、鍋料理、おひたし、炒めものはもちろん、クセのない味わいで、バターやクリームとの相性もよく、洋風にも調理できます。</p>
+    </div>
+    <div class="section-content-divide">
+      <h2 class="title center">小松菜の主な栄養素
+      </h2>
+      <h3 class="title-sub center">カルシウムたっぷり！風邪予防にも。
+      </h3>
+      <% if @product.vitamins %>
+        <div class="block">
+          <ul class="tag-list">
+            <% @product.vitamins.all.each do |vitamin| %>
+              <li class="tag"><%= vitamin.name %></li>
+            <% end %>
+          </ul>
+        </div>
+      <% end %>
+      <p>牛乳並みのカルシウム量で、骨粗しょう症予防に効果的。野菜トップクラスの鉄分に加えその吸収率を高めるビタミンCも豊富！風邪予防や美容効果、生活習慣病予防も期待できます。</p>
+    </div>
+    <div class="section-content-divide">
+      <h2 class="title center">小松菜の保存方法
+      </h2>
+      <h3 class="title-sub center">葉に水分がつくと傷みやすいので注意！
+      </h3>
+      <p>軽くしめらせた新聞にくるんで、ポリ袋に入れ、冷蔵庫に立てて保存します。3～4日もちます。<br>
+  冷凍保存の場合は、固めにゆでて、水分を絞り、カットしてラップに包めば1か月くらいもちます。生のままでもしっかり洗って、冷凍すると1～2週間もちます。</p>
+    </div>
+    <div class="section-content-divide">
+      <h2 class="title center">小松菜の基本情報
+      </h2>
+      <dl class="dl-horizontal" data-role="toggle-period">
+        <dt>和名</dt>
+        <dd>コマツナ、フユナ、ユキナ(小松菜、冬菜、雪菜)</dd>
+      </dl>
+      <dl class="dl-horizontal" data-role="toggle-period">
+        <dt>英名</dt>
+        <dd>Komatsuna</dd>
+      </dl>
+      <dl class="dl-horizontal" data-role="toggle-period">
+        <dt>科名</dt>
+        <dd>アブラナ科</dd>
+      </dl>
+      <dl class="dl-horizontal" data-role="toggle-period">
+        <dt>原産地</dt>
+        <dd>中国</dd>
+      </dl>
+      <dl class="dl-horizontal" data-role="toggle-period">
+        <dt>旬</dt>
+        <dd>12月～2月</dd>
+      </dl>
+      <dl class="dl-horizontal" data-role="toggle-period">
+        <dt>つきやすい虫</dt>
+        <dd>ダイコンハムシ、ヨトウムシ、アブラムシ、ナメクジ</dd>
+      </dl>
+    </div>
+  </section>
+  <aside>
+    <div class="modal mfp-hide" id="modal1">
+      <div class="modal-head">
+        <div class="modal-head-title">小松菜のクルミ味噌和え</div>
+      </div>
+      <div class="modal-body">
+        <div class="media-vertical">
+          <figure class="media-object"><img alt="" height="" src="//jp.rakuten-static.com/recipe-space/d/strg/ctrl/3/d9c111795f391503707b12dd0482a7b9fa44d26b.88.2.3.2.jpg" width="">
+          </figure>
+          <div class="media-body">
+            <p>シャキシャキした小松菜と刻んだ胡桃のプツプツの食感がお気に入り♪あっさりめの小松菜も味噌を加えることでコクもアップして食べ応えも◎</p>
+          </div>
+        </div>
+      </div>
+      <div class="modal-foot">
+        <div class="modal-buttons"><a class="button-sub js-modal-close">閉じる</a><a class="button" href="http://recipe.rakuten.co.jp/recipe/1510002538/" target="_blank">楽天レシピへ</a>
+        </div>
+      </div>
+    </div>
+    <div class="modal mfp-hide" id="modal2">
+      <div class="modal-head">
+        <div class="modal-head-title">小松菜とチキンのクリームパスタ</div>
+      </div>
+      <div class="modal-body">
+        <div class="media-vertical">
+          <figure class="media-object"><img alt="" height="" src="//jp.rakuten-static.com/recipe-space/d/strg/ctrl/3/aacf37ac44bce57904d66081242d0abad03f413c.32.2.3.2.jpg" width="">
+          </figure>
+          <div class="media-body">
+            <p>子供も大人も大好きな味！！ベビーチーズがアクセント☆</p>
+          </div>
+        </div>
+      </div>
+      <div class="modal-foot">
+        <div class="modal-buttons"><a class="button-sub js-modal-close">閉じる</a><a class="button" href="http://recipe.rakuten.co.jp/recipe/1730007759/" target="_blank">楽天レシピへ</a>
+        </div>
+      </div>
+    </div>
+    <div class="modal mfp-hide" id="modal3">
+      <div class="modal-head">
+        <div class="modal-head-title">グリーンスムージー！小松菜とバナナと豆乳で！</div>
+      </div>
+      <div class="modal-body">
+        <div class="media-vertical">
+          <figure class="media-object"><img alt="" height="" src="//jp.rakuten-static.com/recipe-space/d/strg/ctrl/3/53cd29f80892e8cfdc200de21ed820fda098d56b.92.2.3.2.jpg" width="">
+          </figure>
+          <div class="media-body">
+            <p>鉄分たっぷりの小松菜と、バナナ、豆乳のグリーンスムージーです。 スッキリさわやかな口当たりで、夏バテ対策に飲みやすいです。</p>
+          </div>
+        </div>
+      </div>
+      <div class="modal-foot">
+        <div class="modal-buttons"><a class="button-sub js-modal-close">閉じる</a><a class="button" href="http://recipe.rakuten.co.jp/recipe/1390012060/" target="_blank">楽天レシピへ</a>
+        </div>
+      </div>
+    </div>
+  </aside>
+</div>

@@ -1,0 +1,598 @@
+@charset "UTF-8";
+
+/* start crops css modify */
+
+.mod-hero {
+  position: relative;
+  margin: -15px -10px 0;
+  height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.area-header .mod-hero {
+  margin: 0;
+}
+
+.mod-hero-figure {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  img {
+    min-height: 360px;
+    height: 100%;
+    max-width: 600%;
+    width: auto;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+}
+
+.mod-hero-head {
+  position: relative;
+  z-index: 1;
+}
+
+/* end crops css modify */
+
+.service-status {
+  display: none !important;
+}
+
+.is-oldWin {
+  .mod-scale-bar {
+    display: inline-table;
+  }
+  .mod-scale-bar-item {
+    min-width: 6em;
+    display: table-cell;
+  }
+  [class^="icon-"], [class*=" icon-"], .button-menu, .button-close, .button-back, .button-next {
+    font-family: none !important;
+  }
+  [class^="icon-"]:before, [class*=" icon-"]:before, .button-menu:before, .button-close:before, .button-back:before, .button-next:before {
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-image: url(https://agriculture.rakuten.co.jp/farm/assets/common/img/sprite.svg);
+    content: '';
+  }
+  .media-comingsoon .figure-noimage:before, .link-zoom:before, .status-marked:before, .button-close:before, .button-menu-close:before, .button-menu.is-active:before, button.mfp-close:before, .mfp-arrow:before, .button-back:before, .button-next:before, .button-menu:before, .form-text-ok:before, .is-valid:after {
+    font-family: none !important;
+    font-size: 0;
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-image: url(https://agriculture.rakuten.co.jp/farm/assets/common/img/sprite.svg);
+    content: '';
+  }
+  .mod-sns {
+    .mod-sns-twitter:before, .mod-sns-facebook:before {
+      font-family: none !important;
+      font-size: 0;
+      display: inline-block;
+      background-repeat: no-repeat;
+      background-image: url(https://agriculture.rakuten.co.jp/farm/assets/common/img/sprite.svg);
+      content: '';
+    }
+  }
+  .mod-phase {
+    .mod-phase-fill:before, .mod-phase-blank:before {
+      font-family: none !important;
+      font-size: 0;
+      display: inline-block;
+      background-repeat: no-repeat;
+      background-image: url(https://agriculture.rakuten.co.jp/farm/assets/common/img/sprite.svg);
+      content: '';
+    }
+  }
+  .mod-sign-figure .mod-job-remove:before, .icon-payment2:before, .mod-steps .mod-steps-item.is-active .icon-payment:before, .icon-farmer2:before, .mod-steps .mod-steps-item.is-active .icon-farmer:before, .icon-plant2:before, .mod-steps .mod-steps-item.is-active .icon-plant:before, .media-comingsoon .figure-noimage:before {
+    font-family: none !important;
+    font-size: 0;
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-image: url(https://agriculture.rakuten.co.jp/farm/assets/common/img/sprite.svg);
+    content: '';
+  }
+  .mod-steps .mod-steps-item.is-active {
+    .icon-plant:before, .media-comingsoon .figure-noimage:before {
+      font-family: none !important;
+      font-size: 0;
+      display: inline-block;
+      background-repeat: no-repeat;
+      background-image: url(https://agriculture.rakuten.co.jp/farm/assets/common/img/sprite.svg);
+      content: '';
+    }
+  }
+  .media-comingsoon .mod-steps .mod-steps-item.is-active .figure-noimage:before, .icon-box2:before, .mod-steps .mod-steps-item.is-active .icon-box:before, .icon-check2:before, .mod-steps .mod-steps-item.is-active .icon-check:before, .icon-delivery2:before, .mod-steps .mod-steps-item.is-active .icon-delivery:before, .icon-instruction2:before, .mod-nav-function > ul > .mod-nav-item.is-active .mod-nav-head .icon-instruction:before, .icon-picture2:before, .mod-nav-function > ul > .mod-nav-item.is-active .mod-nav-head .icon-picture:before, .icon-history2:before, .mod-nav-function > ul > .mod-nav-item.is-active .mod-nav-head .icon-history:before, .icon-chat2:before, .mod-nav-function > ul > .mod-nav-item.is-active .mod-nav-head .icon-chat:before, .icon-config2:before, .mod-nav-function > ul > .mod-nav-item.is-active .mod-nav-head .icon-config:before {
+    font-family: none !important;
+    font-size: 0;
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-image: url(https://agriculture.rakuten.co.jp/farm/assets/common/img/sprite.svg);
+    content: '';
+  }
+  .media-comingsoon .figure-noimage {
+    opacity: 0.8;
+    &:before {
+      -webkit-transform: scale(2);
+      -ms-transform: scale(2);
+      transform: scale(2);
+      position: absolute;
+      top: 65%;
+      left: 59%;
+    }
+    &:after {
+      border-color: #fff;
+    }
+  }
+  .top-section-linknavi .top-boxsize [class*="top-producer-linknavi0"] .link-box-head:after {
+    background: none;
+    display: none;
+  }
+  .mod-heading-figure .icon-home {
+    margin-right: 5px;
+    margin-top: -6px;
+    position: relative;
+  }
+  .mod-phase {
+    .mod-phase-fill {
+      margin-right: 3px;
+    }
+    .mod-phase-blank {
+      margin-right: 3px;
+      opacity: 0.3;
+    }
+  }
+  .icon-payment:before {
+    width: 20px;
+    height: 20px;
+    background-position: 0 0;
+  }
+  .icon-payment2:before, .mod-steps .mod-steps-item.is-active .icon-payment:before {
+    width: 20px;
+    height: 20px;
+    background-position: -30px 0;
+  }
+  .icon-account:before {
+    width: 20px;
+    height: 20px;
+    background-position: -60px 0;
+  }
+  .icon-account2:before {
+    width: 20px;
+    height: 20px;
+    background-position: -90px 0;
+  }
+  .icon-box:before {
+    width: 20px;
+    height: 20px;
+    background-position: -120px 0;
+  }
+  .icon-box2:before, .mod-steps .mod-steps-item.is-active .icon-box:before {
+    width: 20px;
+    height: 20px;
+    background-position: -150px 0;
+  }
+  .icon-check:before {
+    width: 20px;
+    height: 20px;
+    background-position: -180px 0;
+  }
+  .icon-check2:before, .mod-steps .mod-steps-item.is-active .icon-check:before {
+    width: 20px;
+    height: 20px;
+    background-position: -210px 0;
+  }
+  .icon-delivery:before {
+    width: 20px;
+    height: 20px;
+    background-position: -240px 0;
+  }
+  .icon-delivery2:before, .mod-steps .mod-steps-item.is-active .icon-delivery:before {
+    width: 20px;
+    height: 20px;
+    background-position: -270px 0;
+  }
+  .icon-farmer:before {
+    width: 20px;
+    height: 20px;
+    background-position: 0 -30px;
+  }
+  .icon-farmer2:before, .mod-steps .mod-steps-item.is-active .icon-farmer:before {
+    width: 20px;
+    height: 20px;
+    background-position: -30px -30px;
+  }
+  .icon-flag:before, .status-marked:before {
+    width: 20px;
+    height: 20px;
+    background-position: -60px -30px;
+    -webkit-transform: scale(0.6);
+    -ms-transform: scale(0.6);
+    transform: scale(0.6);
+    margin-left: -4px;
+  }
+  .icon-home:before {
+    width: 20px;
+    height: 20px;
+    background-position: -90px -30px;
+  }
+  .icon-ok:before, .is-valid:after, .form-text-ok:before {
+    width: 20px;
+    height: 20px;
+    background-position: -120px -30px;
+  }
+  .icon-plant:before {
+    width: 20px;
+    height: 20px;
+    background-position: -150px -30px;
+  }
+  .icon-plant2:before, .mod-steps .mod-steps-item.is-active .icon-plant:before, .media-comingsoon .figure-noimage:before {
+    width: 20px;
+    height: 20px;
+    background-position: -180px -30px;
+  }
+  .icon-zoom:before, .link-zoom:before {
+    width: 20px;
+    height: 20px;
+    background-position: -203px -24px;
+  }
+  .icon-facebook:before, .mod-sns-facebook:before {
+    width: 20px;
+    height: 20px;
+    background-position: -240px -30px;
+  }
+  .icon-twitter:before, .mod-sns-twitter:before {
+    width: 20px;
+    height: 20px;
+    background-position: -270px -30px;
+  }
+  .icon-picture:before {
+    width: 20px;
+    height: 20px;
+    background-position: 0 -60px;
+  }
+  .icon-picture2:before {
+    width: 20px;
+    height: 20px;
+    background-position: -30px -60px;
+  }
+  .icon-leaf:before {
+    width: 20px;
+    height: 20px;
+    background-position: -60px -60px;
+  }
+  .mod-phase {
+    .mod-phase-fill:before, .mod-phase-blank:before {
+      width: 20px;
+      height: 20px;
+      background-position: -60px -60px;
+    }
+  }
+  .icon-up:before {
+    width: 20px;
+    height: 20px;
+    background-position: -90px -60px;
+  }
+  .icon-right:before {
+    width: 20px;
+    height: 20px;
+    background-position: -120px -60px;
+  }
+  .icon-menu:before, .button-menu:before {
+    width: 20px;
+    height: 20px;
+    background-position: -210px -60px;
+  }
+  .icon-mail2:before {
+    width: 20px;
+    height: 20px;
+    background-position: -240px -60px;
+  }
+  .icon-mail:before {
+    width: 20px;
+    height: 20px;
+    background-position: -270px -60px;
+  }
+  .icon-left:before {
+    width: 20px;
+    height: 20px;
+    background-position: 0 -90px;
+  }
+  .icon-instruction2:before {
+    width: 20px;
+    height: 20px;
+    background-position: -30px -90px;
+  }
+  .icon-instruction:before {
+    width: 20px;
+    height: 20px;
+    background-position: -60px -90px;
+  }
+  .icon-home2:before {
+    width: 20px;
+    height: 20px;
+    background-position: -120px -90px;
+  }
+  .icon-history2:before {
+    width: 20px;
+    height: 20px;
+    background-position: -150px -90px;
+  }
+  .icon-history:before {
+    width: 20px;
+    height: 20px;
+    background-position: -180px -90px;
+  }
+  .icon-field:before {
+    width: 20px;
+    height: 20px;
+    background-position: -210px -90px;
+  }
+  .icon-cross:before, .button-close:before, button.mfp-close:before {
+    width: 20px;
+    height: 20px;
+    background-position: -270px -90px;
+  }
+  .icon-config2:before {
+    width: 20px;
+    height: 20px;
+    background-position: 0 -120px;
+  }
+  .icon-config:before {
+    width: 20px;
+    height: 20px;
+    background-position: -30px -120px;
+  }
+  .icon-chat2:before {
+    width: 20px;
+    height: 20px;
+    background-position: -60px -120px;
+  }
+  .icon-chat:before {
+    width: 20px;
+    height: 20px;
+    background-position: -90px -120px;
+  }
+  .icon-arrow-up:before {
+    width: 20px;
+    height: 20px;
+    background-position: -120px -120px;
+  }
+  .icon-arrow-right:before, .button-next:before {
+    width: 20px;
+    height: 20px;
+    background-position: -150px -120px;
+  }
+  .icon-arrow-left:before, .button-back:before {
+    width: 20px;
+    height: 20px;
+    background-position: -180px -120px;
+  }
+  .icon-arrow-down:before {
+    width: 20px;
+    height: 20px;
+    background-position: -210px -120px;
+  }
+  .icon-arrow-left2:before, .heading-farm .button-back:before {
+    width: 20px;
+    height: 20px;
+    background-position: -240px -120px;
+  }
+  .icon-arrow-right2:before, .heading-farm .button-next:before {
+    width: 20px;
+    height: 20px;
+    background-position: -270px -120px;
+  }
+  .icon-cross2:before {
+    width: 20px;
+    height: 20px;
+    background-position: 0 -150px;
+  }
+  .button-menu {
+    &.is-active:before, &.button-menu-close:before {
+      width: 20px;
+      height: 20px;
+      background-position: 0 -150px;
+    }
+  }
+  .icon-account3:before, .mod-nav-top .icon-account:before {
+    width: 20px;
+    height: 20px;
+    background-position: -30px -150px;
+  }
+  .icon-delivery3:before, .mod-nav-top .icon-delivery:before {
+    width: 20px;
+    height: 20px;
+    background-position: -60px -150px;
+  }
+  .icon-history3:before, .mod-nav-top .icon-history:before {
+    width: 20px;
+    height: 20px;
+    background-position: -90px -150px;
+  }
+  .list-block > li > a:after, .link-block:after, .link-box .link-box-head:after, .mod-message-head > a:before {
+    content: "" !important;
+    width: 7px !important;
+    height: 7px !important;
+    border-top: 2px solid #999999;
+    border-right: 2px solid #999999;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    margin-top: -4px;
+    font-family: inherit !important;
+  }
+  .list-block > li > a:after {
+    border-top-color: #0f9932;
+    border-right-color: #0f9932;
+  }
+  .mod-message-head > a:before {
+    border-top-color: #fff;
+    border-right-color: #fff;
+  }
+  .link-info:before, .icon-info:before, .link-question:before, .icon-question:before {
+    content: "\00ff01" !important;
+    width: 1.1em !important;
+    height: 1.1em !important;
+    display: inline-block;
+    text-align: center;
+    border: 1px solid;
+    border-radius: 100%;
+    font-size: 0.9em !important;
+    font-weight: bold;
+    line-height: 1.1;
+    font-family: inherit !important;
+    background: none !important;
+  }
+  .link-question:before, .icon-question:before {
+    content: "\00ff1f" !important;
+  }
+  .link-box {
+    .link-box-head:after {
+      -webkit-transform: rotate(135deg);
+      -ms-transform: rotate(135deg);
+      transform: rotate(135deg);
+      -webkit-transform: rotate(135deg);
+      -ms-transform: rotate(135deg);
+      transform: rotate(135deg);
+    }
+    &.is-active .link-box-head:after, .link-box-head.is-active:after {
+      -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+      transform: rotate(-45deg);
+    }
+  }
+  .mod-fert-list-item:after {
+    content: "";
+    width: 7px;
+    height: 7px;
+    border-top: 2px solid #999;
+    border-right: 2px solid #999;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    margin-top: -4px;
+    font-family: inherit !important;
+  }
+  .mod-water-list-item:after {
+    content: "";
+    width: 7px;
+    height: 7px;
+    border-top: 2px solid #999;
+    border-right: 2px solid #999;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    margin-top: -4px;
+    font-family: inherit !important;
+    border-top-color: #1eb9e6;
+    border-right-color: #1eb9e6;
+  }
+  .mod-fert-list-item:after {
+    border-top-color: #af8a54;
+    border-right-color: #af8a54;
+  }
+  .mod-field-status-current {
+    position: absolute;
+    top: -2.2em;
+    display: inline-block;
+    color: #fff;
+    font-weight: 700;
+    width: 2em;
+    height: 2em;
+    font-size: 14px;
+    z-index: 2;
+    border-radius: 100%;
+    &:before {
+      position: absolute;
+      bottom: -1.5em;
+      left: 50%;
+      margin-left: -.8em;
+      content: "";
+      display: inline-block;
+      border-width: 1em .8em;
+      border-style: solid;
+      border-color: transparent;
+      z-index: 1;
+      font-size: 14px;
+    }
+  }
+  .mod-field-status-water .mod-field-status-current {
+    background-color: #1eb9e6;
+    &:before {
+      border-top-color: #1eb9e6;
+    }
+  }
+  .mod-field-status-fert .mod-field-status-current {
+    background-color: #af8a54;
+    &:before {
+      border-top-color: #af8a54;
+    }
+  }
+  .mod-field-status-weed .mod-field-status-current {
+    background-color: #0f9932;
+    &:before {
+      border-top-color: #0f9932;
+    }
+  }
+  .mod-field-status-current-value {
+    position: absolute;
+    display: inline-block;
+    top: .5em;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    z-index: 3;
+    font-size: 12px;
+  }
+}
+
+/* webfont IE display issue #SF-1913 */
+@font-face {
+  .is-oldWin {
+    font-family: 'ragri-icons';
+    src: url("/farm/app/assets/common/fonts/ragri-icons.ttf?lsd4x4") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+  }
+}
+
+
+/*.is-oldWin .link-info:before,
+.is-oldWin .link-question:before {
+  line-height: 1.5;
+}*/
+
+.cropsslide-wrap {
+  margin-bottom: 15px;
+}
+
+/* release 0702 ロゴ変更対応 */
+/* new service main color #00b900 */
+
+#header {
+  border-bottom: 2px solid #00b900 !important;
+}
