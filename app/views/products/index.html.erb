@@ -4,7 +4,7 @@
 </h2>
 <p class="sec-disc">お求めやすい少量パック。1人暮らしの方にも最適。</p>
 <div class="area-contents section js-tab-content tab-content" id="cropstab">
-  <ul class="row2 media-list crops-list">
+  <ul class="row3 media-list crops-list">
     <% @products.each do |product| %>
       <li class="col">
         <a name="geTrack" class="fapp_contractField_crops" id="3" href="/farm/app/contractField/crops/002001/">
@@ -20,5 +20,6 @@
         </a>
       </li>
     <% end %>
+    <%= will_paginate @products, renderer: BootstrapPagination::Rails %>
   </ul>
 </div>
