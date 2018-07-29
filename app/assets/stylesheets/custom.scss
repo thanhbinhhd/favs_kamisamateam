@@ -342,10 +342,6 @@ p {
   }
 }
 
-.signup-button {
-  margin-left: 75px;
-}
-
 .btn-info {
   background-color: $mediumblue1 !important;
   margin-bottom: 5px;
@@ -358,4 +354,11 @@ p {
 }
 .top-image {
   height: 170px !important;
+}
+._check_box {
+  min-height: auto !important;
+}
+.pass-text {
+  text-align: center;
+  padding-top: 25px !important;
 }

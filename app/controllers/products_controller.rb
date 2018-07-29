@@ -1,8 +1,10 @@
 class ProductsController < ApplicationController
   skip_before_action :authenticate_user!
   before_action :find_product, only: [:show]
+
   def index
-    @products = Product.all
+    @products = Product.paginate(page: params[:page],
+      per_page: Settings.page_product_size).order(id: :desc)
   end
 
   def show
