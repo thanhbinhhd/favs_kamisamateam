@@ -2,10 +2,10 @@
 <div class="area-contents">
   <header class="area-header">
     <div class="media-vertical media-thumb">
-      <figure class="media-object">
+      <figure class="media-object-detail">
         <div class="image-name"><%= image_name = @product.image %></div>
         <%= image_tag(image_name) %>
-        <figcaption class="media-caption"><b><%= @product.name %></b>
+        <h1 class="product-name center"><%= @product.name %></h1>
         </figcaption>
       </figure>
     </div>

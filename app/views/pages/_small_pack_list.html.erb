@@ -5,29 +5,28 @@
         <div class="imgWrap">
           <%= link_to image_tag("crops_icon"), products_path(@products) %>
         </div>
-        <div class="txtWrap">
+        <div class="txtWrap list-name">
           <b>作物リストをみる</b>
         </div>
       </a>
-
     </li>
     <li>
-      <a href="https://agriculture.rakuten.co.jp/farm/connect/farmers?l-id=top-listmenu_farmersList">
+      <a href="#">
         <div class="imgWrap">
-          <%= image_tag("farmers_icon") %>
+          <%= link_to image_tag("farmers_icon"), users_path(@users) %>
         </div>
-        <div class="txtWrap">
-          農家さんリストを<wbr>みる
+        <div class="txtWrap list-name">
+          <b>農家さんリストをみる</b>
         </div>
       </a>
     </li>
     <li>
-      <a href="/calendar/?l-id=top-listmenu_calendar">
+      <a href="#">
         <div class="imgWrap">
-          <%= image_tag("calendar_icon") %>
+          <%= link_to image_tag("calendar_icon"), users_path(@users) %>
         </div>
-        <div class="txtWrap">
-          栽培スケジュールを<wbr>みる
+        <div class="txtWrap list-name">
+          <b>培スケジュールををみる</b>
         </div>
       </a>
     </li>
