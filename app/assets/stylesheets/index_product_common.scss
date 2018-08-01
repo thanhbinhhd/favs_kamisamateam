@@ -1519,6 +1519,20 @@ body {
   }
 }
 
+.media-object-detail {
+  margin: 0;
+  overflow: hidden;
+  position: relative;
+  border-radius: 4px;
+  img {
+    position: relative;
+    border-radius: 4px;
+    z-index: 2;
+    height: 350px !important;
+    width: 100%;
+  }
+}
+
 .media-middle {
   display: table;
   width: 100%;
@@ -6453,4 +6467,10 @@ img.mfp-img {
   .myfarmHeading .myfarmHeading-profile .profile-image {
     top: -20px;
   }
+}
+
+.product-name {
+  font-size: 200%;
+  padding-top: 20px;
+  padding-bottom: 5px;
 }
