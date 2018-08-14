@@ -7,4 +7,5 @@ Rails.application.routes.draw do
   get "pages/:page", to: "pages#show", as: "page"
   resources :products, only: [:index, :show]
   resources :users, only: [:index, :show]
+  resources :posts, only: :index
 end

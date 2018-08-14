@@ -1,0 +1,22 @@
+<%= render "pages/top" %>
+<h2 class="sec-head" id="sc-grp7">
+  <span>投稿一覧</span>
+</h2>
+<p class="sec-disc">お求めやすい少量パック。1人暮らしの方にも最適。</p>
+<div class="top-c-articleList">
+  <div class="inner">
+    <ul class="articlelist-list">
+      <% @posts.each do |post| %>
+        <li class="article-new">
+          <div class="image-name"><%= image_name = post.image %></div>
+          <%= link_to image_tag(image_name), "#" %>
+          <h2 class="articlelist-title">
+            <strong><%= post.title %></strong>
+          </h2>
+          <p class="articlelist-text"><%= post.content %></p>
+        </li>
+      <% end %>
+    </ul>
+    <%= will_paginate @posts, renderer: BootstrapPagination::Rails %>
+  </div>
+</div>
