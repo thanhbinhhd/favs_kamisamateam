@@ -70,7 +70,7 @@ Product.create!([
   {name: "トマト", image: "products/45.jpg", category_id: 1},
   {name: "ミディトマト", image: "products/46.jpg", category_id: 1},
   {name: "ミニトマト", image: "products/47.jpg", category_id: 1},
-    {name: "ゼリートマト", image: "products/48.jpg", category_id: 1},
+  {name: "ゼリートマト", image: "products/48.jpg", category_id: 1},
   {name: "ピオーネ", image: "products/49.jpg", category_id: 2},
   {name: "シャインマスカット", image: "products/50.jpg", category_id: 2},
   {name: "パクチー", image: "products/51.jpg", category_id: 1},
@@ -509,3 +509,77 @@ User.create!([
     password: "123456", password_confirmation: "123456", avatar: "farmers/51.jpg", role: "Farmer"}
   ])
 puts "Create Farmers"
+
+Post.create!([
+  {title: "農業しよう！妻の一言で移住して黄金メロン「黄美香(きみか)」を栽培", image: "posts/1.jpg",
+    user_id: 13, content: "黄美香(きみか)メロンを栽培する、福井県あわら市 Fruits Park Okayuの岡田夫妻。
+    宿泊業から農家に転身し、全く知らない土地で、フルーツを育て、地域の活性化を真剣に考えています。"},
+  {title: "農家インタビュー　1房3万円?!小学生から研究した「夢のぶどう", image: "posts/2.jpg",
+    user_id: 14, content: "有機JAS(オーガニック)認証のぶどう農家、山口県 亀の甲農園の三隅 忠典さん。
+    農薬不使用では出来ないと言われてきた果樹の栽培に、果敢に挑み続けたその人生を伺ってきました。"},
+  {title: "Kai誕生秘話。どうしてこんなバカなことを始めたのか？", image: "posts/3.jpg",
+    user_id: 15, content: "「ネットゲームで野菜を作る」なぜそんなことを考えたのか？
+    笑われても、バカにされても、ピーマンを投げられても諦めなかった、
+    Kaiの生みの親・遠藤 忍が誕生秘話を語ります。"},
+  {title: "農業しよう！妻の一言で移住して黄金メロン「黄美香(きみか)」を栽培", image: "posts/4.jpg",
+    user_id: 16, content: "黄美香(きみか)メロンを栽培する、福井県あわら市 Fruits Park Okayuの岡田夫妻。
+    宿泊業から農家に転身し、全く知らない土地で、フルーツを育て、地域の活性化を真剣に考えています。"},
+  {title: "農家インタビュー　1房3万円?!小学生から研究した「夢のぶどう", image: "posts/5.jpg",
+    user_id: 17, content: "有機JAS(オーガニック)認証のぶどう農家、山口県 亀の甲農園の三隅 忠典さん。
+    農薬不使用では出来ないと言われてきた果樹の栽培に、果敢に挑み続けたその人生を伺ってきました。"},
+  {title: "Kai誕生秘話。どうしてこんなバカなことを始めたのか？", image: "posts/6.jpg",
+    user_id: 18, content: "「ネットゲームで野菜を作る」なぜそんなことを考えたのか？
+    笑われても、バカにされても、ピーマンを投げられても諦めなかった、
+    Kaiの生みの親・遠藤 忍が誕生秘話を語ります。"},
+  {title: "農業しよう！妻の一言で移住して黄金メロン「黄美香(きみか)」を栽培", image: "posts/7.jpg",
+    user_id: 19, content: "黄美香(きみか)メロンを栽培する、福井県あわら市 Fruits Park Okayuの岡田夫妻。
+    宿泊業から農家に転身し、全く知らない土地で、フルーツを育て、地域の活性化を真剣に考えています。"},
+  {title: "農家インタビュー　1房3万円?!小学生から研究した「夢のぶどう", image: "posts/8.jpg",
+    user_id: 20, content: "有機JAS(オーガニック)認証のぶどう農家、山口県 亀の甲農園の三隅 忠典さん。
+    農薬不使用では出来ないと言われてきた果樹の栽培に、果敢に挑み続けたその人生を伺ってきました。"},
+  {title: "Kai誕生秘話。どうしてこんなバカなことを始めたのか？", image: "posts/9.jpg",
+    user_id: 21, content: "「ネットゲームで野菜を作る」なぜそんなことを考えたのか？
+    笑われても、バカにされても、ピーマンを投げられても諦めなかった、
+    Kaiの生みの親・遠藤 忍が誕生秘話を語ります。"}
+])
+puts "Create Posts"
+
+ProductPost.create!([
+  {product_id: 1, post_id: 1},
+  {product_id: 2, post_id: 1},
+  {product_id: 3, post_id: 1},
+  {product_id: 4, post_id: 1},
+  {product_id: 5, post_id: 2},
+  {product_id: 6, post_id: 2},
+  {product_id: 7, post_id: 2},
+  {product_id: 8, post_id: 2},
+  {product_id: 9, post_id: 3},
+  {product_id: 10, post_id: 3},
+  {product_id: 11, post_id: 3},
+  {product_id: 12, post_id: 3},
+  {product_id: 13, post_id: 4},
+  {product_id: 14, post_id: 4},
+  {product_id: 15, post_id: 4},
+  {product_id: 16, post_id: 4},
+  {product_id: 17, post_id: 5},
+  {product_id: 18, post_id: 5},
+  {product_id: 19, post_id: 5},
+  {product_id: 20, post_id: 5},
+  {product_id: 21, post_id: 6},
+  {product_id: 22, post_id: 6},
+  {product_id: 23, post_id: 6},
+  {product_id: 24, post_id: 6},
+  {product_id: 25, post_id: 7},
+  {product_id: 26, post_id: 7},
+  {product_id: 27, post_id: 7},
+  {product_id: 28, post_id: 7},
+  {product_id: 29, post_id: 7},
+  {product_id: 30, post_id: 8},
+  {product_id: 31, post_id: 8},
+  {product_id: 32, post_id: 8},
+  {product_id: 33, post_id: 9},
+  {product_id: 34, post_id: 9},
+  {product_id: 35, post_id: 9},
+  {product_id: 36, post_id: 9}
+  ])
+puts "Create ProductPosts"

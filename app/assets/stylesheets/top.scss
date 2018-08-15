@@ -119,7 +119,6 @@
 }
 
 .top-c-articleList {
-  background-image: url(/top/img/farm_bg_01.png);
   padding: 35px 0;
   .inner {
     width: 100%;
@@ -181,7 +180,6 @@
 }
 
 .herobanner-thumb {
-  background-image: url(/top/img/farm_bg_01.png);
   box-shadow: 0 -8px 16px -8px rgba(0, 0, 0, 0.5) inset;
   padding: 10px 4px 12px;
   .inner {
@@ -517,6 +515,7 @@
       width: 100%;
       text-decoration: none;
       img {
+        height: 50%;
         width: 100%;
         margin-bottom: 10px;
       }
@@ -534,7 +533,6 @@
     width: 60px;
     height: 60px;
     content: '';
-    background: url(/article/img/dec_new.png) no-repeat;
     background-size: 60px auto;
     font-size: 12px;
     white-space: nowrap;
