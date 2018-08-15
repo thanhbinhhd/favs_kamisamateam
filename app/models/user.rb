@@ -1,6 +1,7 @@
 class User < ApplicationRecord
-  devise :database_authenticatable, :registerable,
-    :recoverable, :rememberable, :trackable, :validatable
+  devise :database_authenticatable, :registerable, :recoverable, :rememberable,
+    :trackable, :validatable, :omniauthable, omniauth_providers: [:facebook,
+    :google_oauth2]
 
   validates :email, presence: true, length: {maximum: 255},
     format: {with: Devise.email_regexp}, uniqueness: {case_sensitive: false}
@@ -11,4 +12,18 @@ class User < ApplicationRecord
   has_many :comments, dependent: :destroy
   has_many :activities, dependent: :destroy
   scope :load_farmers, -> { where role: "Farmer" }
+
+  class << self
+    def from_omniauth auth
+      email = auth.provider + "_" + auth.info.email
+      user = where(email: email, provider: auth.provider).first
+      unless user
+        user = User.new provider: auth.provider, email: email,
+          password: Devise.friendly_token[0,20], name: auth.info.name,
+          avatar_cloud: auth.info.image
+        user.save
+      end
+      user
+    end
+  end
 end

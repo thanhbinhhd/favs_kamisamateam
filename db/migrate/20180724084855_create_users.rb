@@ -11,6 +11,8 @@ class CreateUsers < ActiveRecord::Migration[5.2]
       t.string :role, default: "User"
       t.string :sex, default: "Male"
       t.integer :new_notification, default: 0
+      t.string :avatar_cloud, default: nil
+      t.string :provider, default: nil
 
       t.timestamps
     end

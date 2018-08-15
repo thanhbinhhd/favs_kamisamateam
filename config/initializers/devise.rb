@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 # Use this hook to configure devise mailer, warden hooks and so forth.
 # Many of these configuration options can be set straight in your model.
 Devise.setup do |config|
@@ -8,11 +6,7 @@ Devise.setup do |config|
   # confirmation, reset password and unlock tokens in the database.
   # Devise will use the `secret_key_base` as its `secret_key`
   # by default. You can change it below and use your own secret key.
-  # config.secret_key = '5e5330e4f8cf5644c0e173eac3d8e6e0748298e5a53df271e08a23434c97fbfe772f830cf2afd4f8a6aab9056a95eb9e324740778759b596f19d4758f643224d'
-  
-  # ==> Controller configuration
-  # Configure the parent class to the devise controllers.
-  # config.parent_controller = 'DeviseController'
+  # config.secret_key = '970eb6e280a1a79552f40d0798d0380f15bc78bbe1b713f3bf04e89d84ed71179d2b817b40c3b39a706527c4cd438c666066dc70474fa20617e2fc7d403bdf40'
 
   # ==> Mailer Configuration
   # Configure the e-mail address which will be shown in Devise::Mailer,
@@ -114,8 +108,7 @@ Devise.setup do |config|
   config.stretches = Rails.env.test? ? 1 : 11
 
   # Set up a pepper to generate the hashed password.
-  # config.pepper = '9c18ff5626e36691b134802d27f0d11e31067e9407aafe71c63384024ff06f8cdca03365f74aeed88a74239c7633c3c42bec2bbd9a2d8b84b2e72c57b7ceaadc'
-
+  # config.pepper = '90482464fccab73c646d1261af9e6b482b188dba3920232831101e9ea9e2e0a370fd5328df867ea9c89f2d97050f4ebdc05ba22e43773ff44b55ca6e0e86b633'
   # Send a notification to the original email when the user's email is changed.
   # config.send_email_changed_notification = false
 
@@ -280,4 +273,9 @@ Devise.setup do |config|
   # When using OmniAuth, Devise cannot automatically set OmniAuth path,
   # so you need to do it manually. For the users scope, it would be:
   # config.omniauth_path_prefix = '/my_engine/users/auth'
+  config.omniauth :google_oauth2,
+    "515022539762-fc7ouj0rm5rrsjulef8hjcocij88f6td.apps.googleusercontent.com",
+    "me4pJx4YpOrN7E9ICcaM8MJl", {scope: "email"}
+  config.omniauth :facebook, "130583777610862",
+    "d7c61bbe5fb00e7b8d3831473bdfceb3", {scope: "email"}
 end
