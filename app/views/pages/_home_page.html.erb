@@ -24,18 +24,21 @@ body {font-family: "Open Sans"}
 <!-- w3-content defines a container for fixed size centered content,
 and is wrapped around the whole page content, except for the footer in this example -->
 <div class="w3-content" style="max-width:1600px">
-
   <!-- Header -->
-  <header class="w3-container w3-center w3-padding-48 w3-white">
-    <h1 class="w3-xxxlarge"><b>JANE BLOGLIFE</b></h1>
-    <h6>Welcome to the blog of <span class="w3-tag">Jane's world</span></h6>
-  </header>
-
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <!-- Grid -->
+
   <div class="w3-row w3-padding w3-border">
+
 
     <!-- Blog entries -->
     <div class="w3-col l8 s12">
+
+      <div id="new_post" style="margin-top: 20px;" class="w3-container w3-white w3-margin w3-padding-large">   
+          <input type="text" name="" placeholder="What's is' your mind??" class="w3-col s12" data-toggle="modal" data-target="#myModal" >
+      </div>
 
       <!-- Blog entry -->
       <div class="w3-container w3-white w3-margin w3-padding-large">
