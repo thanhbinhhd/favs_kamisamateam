@@ -12,4 +12,5 @@ class Post < ApplicationRecord
   def main_comments
     comments.where(parent_id: nil).order id: :desc
   end
+  mount_uploader :file ,ImageUploader
 end
