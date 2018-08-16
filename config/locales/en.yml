@@ -32,10 +32,31 @@ en:
   login:
     email: "メール"
     password: "パスワード"
-    remember-me: "覚える"
+    remember-me: "サインイン情報を記憶する"
     new-here: "アカウントがない?"
   pages:
     home: "ホーム"
+  main:
+    fav: "人気"
+    fav_outline: "人気の農産物をチェック。早い者勝ち。"
+    last: "最新"
+    last_outline: "お求めやすい少量パック。1人暮らしの方にもオススメ。"
+    list:
+      all: "各種情報一覧"
+      post: "投稿一覧"
+      farmer: "農家さん一覧"
+      product: "農産物一覧"
+    outline:
+      post: "最新の記事をチェックしましょう。"
+      farmer: "ここでは、農家さんの情報を確認できます。"
+      product: "農産物の栄養素や、料理のメニュー、保存方法などの情報を確認できます。"
+    to_watch: "をみる"
+    thumb:
+      san: "さん"
+      yen: "円"
+      tax_fee: "(税込・送料込)"
+      maybe_month: "月頃お届け"
+    
   layouts:
     footer:
       about_us: "About us"
@@ -44,3 +65,12 @@ en:
       contact_us: "Contact us"
       sitemap: "Site Map"
       copyright: "All rights reserved"
+      about_kamisama: "ベトナム理工系トップクラスのハノイ工科大学と、日本の芝浦工業大学の学生チーム。問題解決学習の一環として、webアプリケーション「favs」の開発を行っています。"
+      phone: "Phone (VN) :  +84-4-3795-5417"
+      map_pin: "1 Đại Cồ Việt, Lê Đại Hành, Hà Nội"
+      mail: " Eメール : info@kamisama.com"
+      link: "LINKS"
+      career: "Career"
+      Privacy_Policy: "Privacy Policy"
+      Terms_Conditions: "Terms & Conditions"
+      facebook: "Facebook"
