@@ -1,0 +1,50 @@
+$blue2: #3B5998;
+$white: #fff;
+$red: #dc1a00;
+
+.btn-facebook {
+  background: $blue2;
+  border-radius: 0.5;
+  color: $white;
+  border-width: 1px;
+  border-style: solid;
+
+  a {
+    color: $white;
+  }
+}
+
+.btn-facebook:link, .btn-facebook:visited {
+  color: $white;
+}
+
+.btn-facebook:active, .btn-facebook:hover {
+  background: $blue2;
+  color: $white;
+}
+
+.btn-login {
+  margin-top: 10px;
+  width: 260px;
+}
+
+.btn-google {
+  background: $red;
+  border-radius: 0.5;
+  color: $white;
+  border-width: 1px;
+  border-style: solid;
+
+  a {
+    color: $white;
+  }
+}
+
+.btn-google:link, .btn-google:visited {
+  color: $white;
+}
+
+.btn-google:active, .btn-goole:hover {
+  background: $red;
+  color: $white;
+}

@@ -105,6 +105,8 @@ ActiveRecord::Schema.define(version: 2018_08_15_083942) do
     t.string "role", default: "User"
     t.string "sex", default: "Male"
     t.integer "new_notification", default: 0
+    t.string "avatar_cloud"
+    t.string "provider"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "encrypted_password", default: "", null: false
