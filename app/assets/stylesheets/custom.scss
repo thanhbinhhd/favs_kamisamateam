@@ -366,3 +366,21 @@ p {
   padding-top: 10px;
   margin-left: -20px;
 }
+
+#myModal{
+  width: 80%;
+  margin: 3% 10%;
+  z-index: 100;
+  background: white;
+  border: 1px solid black;
+  position:absolute;
+  height: 80%;
+  display: none;
+}
+#myModal .field *{
+  width: 80%;
+  margin:auto 10%;
+}
+#myModal .actions *{
+  margin: 10px 10%;
+}
