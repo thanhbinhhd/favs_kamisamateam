@@ -1,8 +1,8 @@
 <%= render "pages/top" %>
 <h2 class="sec-head" id="sc-grp7">
-  <span>農産物一覧</span>
+  <span><%= t "main.list.product" %></span>
 </h2>
-<p class="sec-disc">農産物の栄養素や、料理のメニュー、保存方法などの情報を確認できます。</p>
+<p class="sec-disc"><%= t "main.outline.product" %></p>
 <div class="area-contents section js-tab-content tab-content" id="cropstab">
   <ul class="row3 media-list crops-list">
     <% @products.each do |product| %>

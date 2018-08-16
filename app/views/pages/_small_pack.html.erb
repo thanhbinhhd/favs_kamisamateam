@@ -1,19 +1,19 @@
 <h2 class="sec-head" id="sc-grp7">
-  <span>各種情報一覧</span>
+  <span><%= t "main.list.all" %></span>
 </h2>
 <p class="sec-disc"></p>
 <%= render "pages/small_pack_list" %>
 <hr>
 <h2 class="sec-head" id="sc-grp7">
-  <span>人気</span>
+  <span><%= t "main.fav" %></span>
 </h2>
-<p class="sec-disc">人気の農産物をチェック。早い者勝ち。</p>
+<p class="sec-disc"><%= t "main.fav_outline" %></p>
 <%= render "pages/small_pack_favorite" %>
 <hr>
 <h2 class="sec-head" id="sc-grp7">
-  <span>最新</span>
+  <span><%= t "main.last" %></span>
 </h2>
-<p class="sec-disc">お求めやすい少量パック。1人暮らしの方にもオススメ。</p>
+<p class="sec-disc"><%= t "main.last_outline" %></p>
 <%= render "pages/small_pack_new" %>
 <div class="top-c-singleBtn">
   <%= link_to new_user_registration_path, class: "button button-main" do %>

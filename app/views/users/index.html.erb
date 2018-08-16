@@ -1,8 +1,8 @@
 <%= render "pages/top" %>
 <h2 class="sec-head" id="sc-grp7">
-  <span>農家さん一覧</span>
+  <span><%= t "main.list.farmer" %></span>
 </h2>
-<p class="sec-disc">ここでは、農家さんの情報を確認できます。</p>
+<p class="sec-disc"><%= t "main.outline.farmer" %></p>
 <div class="area-contents section js-tab-content tab-content" id="cropstab">
   <ul class="row3 media-list crops-list">
     <% @farmers.each do |farmer| %>
