@@ -6,5 +6,10 @@ Rails.application.routes.draw do
   get "pages/:page", to: "pages#show", as: "page"
   resources :products, only: [:index, :show]
   resources :users, only: [:index, :show]
-  resources :posts, only: :index
+  resources :posts do
+    resources :comments, except: :show
+  end
+  resources :comments do
+    resources :reply_comments, except: :show
+  end
 end

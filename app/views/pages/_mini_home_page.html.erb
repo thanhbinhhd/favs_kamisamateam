@@ -12,5 +12,43 @@
     <p><%= post.content %></p>
     <p class="w3-clear"></p>
   </div>
+  <br>
+  <div class="panel-footer follow_bgr">
+    <div class="btn-group">
+      <span class="posts-comments">
+        <i class="fa fa-comments" aria-hidden="true"></i>
+        <span id="comment-size-<%= post.id %>">
+          <%= post.main_comments.size %>
+        </span>
+        <%= t "post_action.comment" %>
+      </span>
+    </div>
+  </div>
+
+  <div class="post-comment-form">
+    <%= form_for [post, Comment.new], remote: true do |f| %>
+      <%= image_tag avatar_profile(current_user),
+        class: "img-responsive img-avatar-comment" %>
+      <%= f.text_field :content, placeholder: t("comment.write"),
+        class: "form-control comment-form-content",
+        id: "post-comment-form-content-#{post.id}" %>
+    <% end %>
+    <hr>
+  </div>
+
+  <div class="posts-comments" id="posts-comments-<%= post.id %>">
+    <% post_comments = post.main_comments.offset(0)
+      .limit Settings.load_more_comment_size %>
+    <% post_comments.each do |comment| %>
+      <%= render "comments/comment", comment: comment %>
+      <%= render "comments/edit_form", post: post, comment: comment %>
+    <% end %>
+  </div>
+  <div id="load-more-post-comments-<%= post.id %>">
+    <% unless post_comments.empty? %>
+      <%= link_to t("comment.load_more"), post_comments_path(post,
+        comment_offset: post_comments.last.id), remote: true %>
+    <% end %>
+  </div>
 </div>
 <hr>

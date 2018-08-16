@@ -8,4 +8,8 @@ class Post < ApplicationRecord
   validates :user, presence: true
   validates :title, presence:true
   validates :content, presence:true
+
+  def main_comments
+    comments.where(parent_id: nil).order id: :desc
+  end
 end

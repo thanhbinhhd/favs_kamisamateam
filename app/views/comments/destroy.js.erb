@@ -1,0 +1,3 @@
+$('#post-comment-<%= @comment.id %>').remove();
+var size = <%= @post.main_comments.size.to_s %>
+$('#comment-size-<%= @post.id %>').text(size);

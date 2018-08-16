@@ -1,0 +1,9 @@
+<% if @success %>
+  $('#posts-comments-<%= @post.id %>')
+    .prepend('<%= j render "comments/edit_form", comment: @comment %>');
+  $('#posts-comments-<%= @post.id %>')
+    .prepend('<%= j render "comment", comment: @comment %>');
+  $('#post-comment-form-content-<%= @post.id %>').val('');
+  var size = <%= @post.main_comments.size.to_s %>
+  $('#comment-size-<%= @post.id %>').text(size);
+<% end %>
