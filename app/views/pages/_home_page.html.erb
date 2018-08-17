@@ -20,22 +20,58 @@ body {font-family: "Open Sans"}
   <a href="#" class="w3-bar-item w3-button"><i class="fa fa-linkedin"></i></a>
   <a href="#" class="w3-bar-item w3-button w3-right"><i class="fa fa-search"></i></a>
 </div>
-
+  
 <!-- w3-content defines a container for fixed size centered content,
 and is wrapped around the whole page content, except for the footer in this example -->
 <div class="w3-content" style="max-width:1600px">
 
   <!-- Header -->
-  <header class="w3-container w3-center w3-padding-48 w3-white">
-    <h1 class="w3-xxxlarge"><b>JANE BLOGLIFE</b></h1>
-    <h6>Welcome to the blog of <span class="w3-tag">Jane's world</span></h6>
-  </header>
 
   <!-- Grid -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <div class="w3-row w3-padding w3-border">
 
+    <div id="myModal" style="background: transparent;border: none">
+      <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close">&times;</button>
+            <h4 class="modal-title">New Post</h4>
+          </div>
+          <div class="modal-body">
+            <%= form_for(@post = Post.new,{multipart:true}) do |p| %>
+            <div class="field">
+              <%= p.text_field :title, placeholder: "title..." %>
+            </div>
+
+            <div class="field">
+              <%= p.text_area :content, placeholder: "content..." %>
+            </div>
+
+
+            <div class="field">
+              <%= p.file_field :image%>
+            </div>
+            <div class="actions">
+              <%= p.submit %>
+            </div>
+          <% end %>
+          </div>
+        </div>
+
+      </div>
+    </div>
     <!-- Blog entries -->
     <div class="w3-col l8 s12">
+
+      <div id="new_post" style="margin-top: 20px;" class="w3-container w3-white w3-margin w3-padding-large">   
+          <input type="text" id="modal" name="" placeholder="What's is' your mind??" class="w3-col s12" >
+          
+      </div>
+
       <% posts.each do |post| %>
         <%= render "pages/mini_home_page",  post: post %>
       <% end %>
@@ -185,7 +221,7 @@ and is wrapped around the whole page content, except for the footer in this exam
 </div>
 <script>
 // Toggle between hiding and showing blog replies/comments
-document.getElementById("myBtn").click();
+// document.getElementById("myBtn").click();
 function myFunction(id) {
     var x = document.getElementById(id);
     if (x.className.indexOf("w3-show") == -1) {
@@ -199,6 +235,15 @@ function likeFunction(x) {
     x.style.fontWeight = "bold";
     x.innerHTML = "✓ Liked";
 }
+$(document).ready(function(){
+    $("#new_post input").click(function(){
+        $("#myModal").show();
+    });
+
+    $("button.close").click(function () {
+        $("#myModal").hide();
+    });
+});
 </script>
 
 </body>
