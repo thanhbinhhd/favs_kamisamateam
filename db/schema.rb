@@ -15,8 +15,7 @@ ActiveRecord::Schema.define(version: 2018_08_15_083942) do
   create_table "activities", force: :cascade do |t|
     t.integer "user_id"
     t.integer "post_id"
-    t.string "activitype"
-    t.integer "type"
+    t.integer "activity_type", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

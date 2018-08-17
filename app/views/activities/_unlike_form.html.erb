@@ -1,0 +1,6 @@
+<%= link_to post_activity_path(post, activity),
+  remote: true, method: :delete, class: "activity-like" do %>
+  <i class="fa fa-thumbs-up" aria-hidden="true"></i>
+  <span class="post-like-size"><%= post.likes.size %></span>
+  <%= t "post_action.like" %>
+<% end %>

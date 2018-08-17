@@ -73,6 +73,7 @@ en:
       Privacy_Policy: "Privacy Policy"
       Terms_Conditions: "Terms & Conditions"
       facebook: "Facebook"
+  need_sign: "続行する前にサインインまたはサインアップする必要があります。"
   not_found:
     post: "投稿がありません。"
     comment: "コメントがありません。"

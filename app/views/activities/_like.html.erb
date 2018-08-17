@@ -1,0 +1,8 @@
+<span class="<%= check_opacity post, :liked? %>">
+  <% if current_user && current_user.liked?(post) %>
+    <%= render "activities/unlike_form", post: post,
+      activity: activity %>
+  <% else %>
+    <%= render "activities/like_form", post: post %>
+  <% end %>
+</span>

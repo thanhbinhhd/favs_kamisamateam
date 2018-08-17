@@ -27,4 +27,10 @@ module ApplicationHelper
       end
     end
   end
+
+  def check_opacity post, type
+    if current_user && current_user.send(type, post)
+      "activity-opacity"
+    end
+  end
 end
