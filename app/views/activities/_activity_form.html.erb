@@ -1,0 +1,9 @@
+<span class="activity">
+  <span class="post-like <%= post.id %>">
+    <%= render "activities/like", post: post, activity: activity %>
+  </span>
+
+  <span class="post-dislike <%= post.id %>">
+    <%= render "activities/dislike", post: post, activity: activity %>
+  </span>
+</span>

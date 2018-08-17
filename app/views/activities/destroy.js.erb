@@ -1,0 +1,5 @@
+var id = '<%= @post.id %>';
+$('.post-like.' + id).html('<%= j render "activities/like",
+  post: @post, activity: @activity %>');
+$('.post-dislike.' + id).html('<%= j render "activities/dislike",
+  post: @post, activity: @activity %>');

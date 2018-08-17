@@ -30,4 +30,13 @@ class User < ApplicationRecord
   def current_user? user
     self == user
   end
+
+  def liked? post
+    activities.find_by post: post, activity_type: :like
+  end
+
+  def disliked? post
+    activities.find_by post: post, activity_type: :dislike
+  end
+
 end

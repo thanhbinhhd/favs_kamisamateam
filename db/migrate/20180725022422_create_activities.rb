@@ -3,8 +3,7 @@ class CreateActivities < ActiveRecord::Migration[5.2]
     create_table :activities do |t|
       t.integer :user_id
       t.integer :post_id
-      t.string :activitype
-      t.integer :type
+      t.integer :activity_type, null: false
 
       t.timestamps
     end

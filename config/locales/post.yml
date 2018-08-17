@@ -1,0 +1,5 @@
+en:
+  load_more: "もっと読み込む"
+  post_action:
+    like: "高評価"
+    dislike: "低評価"

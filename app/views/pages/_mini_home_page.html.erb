@@ -15,6 +15,10 @@
   <br>
   <div class="panel-footer follow_bgr">
     <div class="btn-group">
+      <div class="post-action">
+        <%= render "activities/activity_form", post: post,
+        activity: post.activity_by_user(current_user) %>
+      </div>
       <span class="posts-comments">
         <i class="fa fa-comments" aria-hidden="true"></i>
         <span id="comment-size-<%= post.id %>">

@@ -583,3 +583,25 @@ ProductPost.create!([
   {product_id: 36, post_id: 9}
   ])
 puts "Create ProductPosts"
+
+Post.all.each do |post|
+  (1..9).each do
+    comment = Comment.create user_id: 15, post_id: post.id,
+      content: "豪雨被害は大丈夫でしたでしょうか?"
+    Comment.create user_id: 16, post_id: post.id, parent_id: comment.id,
+    content: "今晩は遅くなりすいません　愛媛県下の南予地方　
+    肱川が氾濫して大変ですが　東予地区は大丈夫でしたが、
+    この酷暑は農家の僕らは大変です！熱中症になりそうで、
+    朝　夕方の作業でないとやばすぎです、むかご丸さん体調管理気をつけて下さい。"
+  end
+end
+puts "Add Comment to Post"
+
+Post.all.each do |post|
+  Activity.create user_id: 17, post: post, activity_type: :like
+  Activity.create user_id: 18, post: post, activity_type: :like
+  Activity.create user_id: 19, post: post, activity_type: :like
+  Activity.create user_id: 20, post: post, activity_type: :dislike
+  Activity.create user_id: 21, post: post, activity_type: :dislike
+end
+puts "Add Like and Dislike to Post"
