@@ -8,7 +8,6 @@ en:
   log-in: "ログイン"
   sign-up: "サインアップ"
   sign-up-now: "今すぐサインアップ!"
-  upload-review: "レビューをアップロード"
   log-out: "ログアウト"
   cancel: "キャンセル"
   back: "バック"
@@ -56,7 +55,6 @@ en:
       yen: "円"
       tax_fee: "(税込・送料込)"
       maybe_month: "月頃お届け"
-    
   layouts:
     footer:
       about_us: "About us"
@@ -74,3 +72,6 @@ en:
       Privacy_Policy: "Privacy Policy"
       Terms_Conditions: "Terms & Conditions"
       facebook: "Facebook"
+  not_found:
+    post: "投稿がありません。"
+    comment: "コメントがありません。"
