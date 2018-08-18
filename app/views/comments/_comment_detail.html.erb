@@ -20,51 +20,52 @@
         <% else %>
           <span><%= comment.content %></span>
         <% end %>
-
-        <div class="comment-info-action">
-          <% if current_user.current_user? comment.user %>
-            <span class="comment-btn-action">
-              <%= link_to t("comment.delete"), post_comment_path(comment.post,
-                comment), method: :delete, remote: true,
-                data:{confirm: t("comment.sure")} %>
+        <% if user_signed_in? %>
+          <div class="comment-info-action">
+            <% if current_user.current_user? comment.user %>
+              <span class="comment-btn-action">
+                <%= link_to t("comment.delete"), post_comment_path(comment.post,
+                  comment), method: :delete, remote: true,
+                  data:{confirm: t("comment.sure")} %>
+              </span>
+              <span>-</span>
+              <span class="comment-btn-action comment-edit-btn"
+                id="<%= comment.id %>">
+                <%= t "comment.edit" %>
+              </span>
+              <span>-</span>
+            <% end %>
+            <span class="reply-comments-action <%= comment.id %>">
+              <%= link_to t("post_action.reply_comment"), new_comment_reply_comment_path(comment),
+                remote: true %>
             </span>
-            <span>-</span>
-            <span class="comment-btn-action comment-edit-btn"
-              id="<%= comment.id %>">
-              <%= t "comment.edit" %>
+            <span>
+              <%= time_ago_in_words comment.created_at %>
             </span>
-            <span>-</span>
-          <% end %>
-          <span class="reply-comments-action <%= comment.id %>">
-            <%= link_to t("post_action.reply_comment"), new_comment_reply_comment_path(comment),
-              remote: true %>
-          </span>
-          <span>
-            <%= time_ago_in_words comment.created_at %>
-          </span>
-        </div>
+          </div>
 
-        <div class="reply-comments" id="reply-comment-form-<%= comment.id %>">
-        </div>
-        <div class="reply-comments"
-          id="reply-reply-comments-<%= comment.id %>">
-        </div>
+          <div class="reply-comments" id="reply-comment-form-<%= comment.id %>">
+          </div>
+          <div class="reply-comments"
+            id="reply-reply-comments-<%= comment.id %>">
+          </div>
 
-        <div class="repply-comments" id="reply-comments-<%= comment.id %>">
-          <% reply_comments = comment.reply_comments.offset(0)
-            .limit Settings.load_more_reply_comment_size %>
-          <% reply_comments.each do |reply_comment| %>
-            <%= render "reply_comments/reply_comment", comment: reply_comment %>
-            <%= render "reply_comments/edit_form",
-              comment: reply_comment.parent, reply_comment: reply_comment %>
-          <% end %>
-        </div>
-        <div id="load-more-reply-comments-<%= comment.id %>">
-          <% unless reply_comments.empty? %>
-            <%= link_to t("comment.load_more"), comment_reply_comments_path(comment,
-              reply_comment_offset: reply_comments.last.id), remote: true %>
-          <% end %>
-        </div>
+          <div class="repply-comments" id="reply-comments-<%= comment.id %>">
+            <% reply_comments = comment.reply_comments.offset(0)
+              .limit Settings.load_more_reply_comment_size %>
+            <% reply_comments.each do |reply_comment| %>
+              <%= render "reply_comments/reply_comment", comment: reply_comment %>
+              <%= render "reply_comments/edit_form",
+                comment: reply_comment.parent, reply_comment: reply_comment %>
+            <% end %>
+          </div>
+          <div id="load-more-reply-comments-<%= comment.id %>">
+            <% unless reply_comments.empty? %>
+              <%= link_to t("comment.load_more"), comment_reply_comments_path(comment,
+                reply_comment_offset: reply_comments.last.id), remote: true %>
+            <% end %>
+          </div>
+        <% end %>
       </div>
     </span>
   </div>

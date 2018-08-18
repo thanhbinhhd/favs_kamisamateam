@@ -10,8 +10,12 @@ class User < ApplicationRecord
   validates :name, presence: true, length: {maximum: 50}
 
   has_many :comments, dependent: :destroy
+  has_many :posts, dependent: :destroy
   has_many :activities, dependent: :destroy
   scope :load_farmers, -> { where role: "Farmer" }
+  mount_uploader :avatar, AvatarUploader
+
+  enum sex: [:male, :female]
 
   class << self
     def from_omniauth auth

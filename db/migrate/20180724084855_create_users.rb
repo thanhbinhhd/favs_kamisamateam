@@ -6,10 +6,10 @@ class CreateUsers < ActiveRecord::Migration[5.2]
       t.string :password
       t.string :avatar
       t.string :address
-      t.string :string
       t.string :phone
+      t.datetime :birthday, default: DateTime.now
       t.string :role, default: "User"
-      t.string :sex, default: "Male"
+      t.integer :sex, default: 0
       t.integer :new_notification, default: 0
       t.string :avatar_cloud, default: nil
       t.string :provider, default: nil

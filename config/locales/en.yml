@@ -74,6 +74,9 @@ en:
       Terms_Conditions: "Terms & Conditions"
       facebook: "Facebook"
   need_sign: "続行する前にサインインまたはサインアップする必要があります。"
+  perrmission_denied: "アクセス権がありません。"
+  info_update_success: "情報の変更を成功させる。"
   not_found:
     post: "投稿がありません。"
     comment: "コメントがありません。"
+    user: "ユーザーがありません。"

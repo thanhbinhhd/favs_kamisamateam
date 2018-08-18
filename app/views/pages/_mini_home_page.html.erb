@@ -28,24 +28,26 @@
       </span>
     </div>
   </div>
-
-  <div class="post-comment-form">
-    <%= form_for [post, Comment.new], remote: true do |f| %>
-      <%= image_tag avatar_profile(current_user),
-        class: "img-responsive img-avatar-comment" %>
-      <%= f.text_field :content, placeholder: t("comment.write"),
-        class: "form-control comment-form-content",
-        id: "post-comment-form-content-#{post.id}" %>
-    <% end %>
-    <hr>
-  </div>
-
+  <% if user_signed_in? %>
+    <div class="post-comment-form">
+      <%= form_for [post, Comment.new], remote: true do |f| %>
+        <%= image_tag avatar_profile(current_user),
+          class: "img-responsive img-avatar-comment" %>
+        <%= f.text_field :content, placeholder: t("comment.write"),
+          class: "form-control comment-form-content",
+          id: "post-comment-form-content-#{post.id}" %>
+      <% end %>
+      <hr>
+    </div>
+  <% end %>
   <div class="posts-comments" id="posts-comments-<%= post.id %>">
     <% post_comments = post.main_comments.offset(0)
       .limit Settings.load_more_comment_size %>
     <% post_comments.each do |comment| %>
       <%= render "comments/comment", comment: comment %>
-      <%= render "comments/edit_form", post: post, comment: comment %>
+      <% if user_signed_in? %>
+        <%= render "comments/edit_form", post: post, comment: comment %>
+      <% end %>
     <% end %>
   </div>
   <div id="load-more-post-comments-<%= post.id %>">
