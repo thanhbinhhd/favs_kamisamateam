@@ -1,7 +1,7 @@
 class CommentsController < ApplicationController
   before_action :find_post
   before_action :find_comment, only: [:edit, :update, :destroy]
-
+  before_action :authenticate_user!, except: :index
   def index
     @comments = @post.main_comments
     comment_size = Settings.load_more_comment_size

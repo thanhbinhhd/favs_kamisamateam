@@ -12,7 +12,7 @@ module ApplicationHelper
     if user
       @avatar = user.avatar
       if user && @avatar
-        @avatar
+        @avatar.url
       else
         "profile.png"
       end

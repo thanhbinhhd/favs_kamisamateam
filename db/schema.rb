@@ -99,10 +99,10 @@ ActiveRecord::Schema.define(version: 2018_08_15_083942) do
     t.string "password"
     t.string "avatar"
     t.string "address"
-    t.string "string"
     t.string "phone"
+    t.datetime "birthday", default: "2018-08-18 15:49:22"
     t.string "role", default: "User"
-    t.string "sex", default: "Male"
+    t.integer "sex", default: 0
     t.integer "new_notification", default: 0
     t.string "avatar_cloud"
     t.string "provider"

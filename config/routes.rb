@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   root "pages#show", page: "home"
   get "pages/:page", to: "pages#show", as: "page"
   resources :products, only: [:index, :show]
-  resources :users, only: [:index, :show]
+  resources :users, except: [:new, :create]
   resources :posts do
     resources :comments, except: :show
     resources :activities, only: [:create, :destroy]
