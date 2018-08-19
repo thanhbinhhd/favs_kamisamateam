@@ -1,0 +1,32 @@
+<div class="w3-white w3-margin">
+  <div class="w3-container w3-padding w3-black">
+    <h4><%= t "main.list.all" %></h4>
+  </div>
+  <ul class="w3-ul w3-hoverable w3-white">
+    <li class="w3-padding-16">
+      <div class="w3-left w3-margin-right" style="width:50px">
+        <%= link_to image_tag("crops_icon"), products_path(products) %>
+      </div>
+      <span><%= t "main.list.product" %><%= t "main.to_watch" %></span>
+      <br>
+      <span><%= t "main.outline.product" %></span>
+    </li>
+    <li class="w3-padding-16">
+      <div class="w3-left w3-margin-right" style="width:50px">
+        <%= link_to image_tag("farmers_icon"), users_path(farmers) %>
+      </div>
+      <span><%= t "main.list.farmer" %><%= t "main.to_watch" %></span>
+      <br>
+      <span><%= t "main.outline.farmer" %></span>
+    </li>
+    <li class="w3-padding-16">
+      <div class="w3-left w3-margin-right" style="width:50px">
+        <%= link_to image_tag("post_icon"), posts_path(posts) %>
+      </div>
+      <span><%= t "main.list.post" %><%= t "main.to_watch" %></span>
+      <br>
+      <span><%= t "main.outline.post" %></span>
+    </li>
+  </ul>
+</div>
+<hr>

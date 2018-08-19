@@ -1,6 +1,7 @@
 <% provide :title, t("pages.home") %>
 <% if user_signed_in? %>
-  <%= render "pages/home_page", posts: @posts, products: @products %>
+  <%= render "pages/home_page", posts: @posts, products: @products,
+    popular_posts: @popular_posts, farmers: @farmers  %>
 <% else %>
 	<%= render "pages/top" %>
 	<%= render "pages/small_pack" %>

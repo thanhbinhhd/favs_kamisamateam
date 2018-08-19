@@ -9,6 +9,8 @@ en:
     post_title: "タイトル"
     post_content: "内容"
     you_mind: "さん一今なにしている？"
+    upload_success: "投稿をアップロードすることは成功しました。"
+    upload_fail: "投稿をアップロードすることは失敗しました。"
   searches:
     users: "ユーザー"
     products: "農産物"

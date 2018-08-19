@@ -3,7 +3,7 @@ class ProductsController < ApplicationController
 
   def index
     @products = Product.paginate(page: params[:page],
-      per_page: Settings.page_product_size).order(id: :desc)
+      per_page: Settings.page_product_size).order(id: :asc)
   end
 
   def show
@@ -14,7 +14,7 @@ class ProductsController < ApplicationController
   def find_product
     @product = Product.find(params[:id])
     unless @product
-      flash[:danger] =  "Product not found!"
+      flash[:danger] = t "not_found.product"
       redirect_to not_found_index_path
     end
   end

@@ -15,12 +15,12 @@ class PostsController < ApplicationController
   	@post = Post.new post_params
   	@post.user_id = current_user.id
   	if @post.save
-  	  flash[:success] = "Create post successfully!"
+  	  flash[:success] = t "post_action.upload_success"
       redirect_to root_path
     else
       respond_to do |format|
         format.html do
-          flash[:danger] = "Create post false!"
+          flash[:danger] = t "post_action.upload_fail"
           redirect_to root_path
         end
         format.js
@@ -39,7 +39,7 @@ class PostsController < ApplicationController
   def load_post
   	@post = Post.find_by id: params[:id]
   	unless @post
-  		flash[:danger] = "Post not found!"
+  		flash[:danger] = t "not_found.post"
   		redirect_to root_path
   	end
 
