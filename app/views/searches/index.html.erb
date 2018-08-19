@@ -1,0 +1,44 @@
+<br><br>
+<div class="row search-index">
+  <div class="container">
+    <div class="col-sm-9 show-result">
+
+      <div class="result-products active">
+        <h4 class="tab-title"><%= t "searches.products" %></h4>
+      </div>
+      <div class="result-users ">
+        <h4 class="tab-title"><%= t "searches.users" %></h4>
+      </div>
+      <div class="row">
+        <div class="row result-users-list">
+          <% if @results["users"].empty? %>
+            <h1><%= t "not_found.user" %></h1>
+          <% else %>
+            <div class="area-contents section js-tab-content tab-content" id="cropstab">
+              <ul class="row3 media-list crops-list">
+                <% @results["users"].each do |user| %>
+                  <%= render "users/user", farmer: user %>
+                <% end %>
+              </ul>
+            </div>
+          <% end %>
+        </div>
+        <div class="clearfix"></div>
+          <div class="row result-products-list">
+            <% if @results["products"].empty? %>
+              <h1><%= t "not_found.product" %></h1>
+            <% else %>
+              <div class="area-contents section js-tab-content tab-content" id="cropstab">
+                <ul class="row3 media-list crops-list">
+                  <% @results["products"].each do |product| %>
+                    <%= render "products/product",  product: product %>
+                  <% end %>
+                </ul>
+              </div>
+            <% end %>
+          </div>
+        <div class="clearfix"></div>
+      </div>
+    </div>
+  </div>
+</div>

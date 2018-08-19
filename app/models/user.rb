@@ -43,4 +43,11 @@ class User < ApplicationRecord
     activities.find_by post: post, activity_type: :dislike
   end
 
+  class << self
+    def search data
+      data = data.downcase
+      User.where "lower(name) LIKE ?", "%#{data}%"
+    end
+  end
+
 end

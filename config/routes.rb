@@ -13,4 +13,5 @@ Rails.application.routes.draw do
   resources :comments do
     resources :reply_comments, except: :show
   end
+  resources :searches, only: :index
 end
