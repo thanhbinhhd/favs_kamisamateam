@@ -8,12 +8,12 @@ class PostsController < ApplicationController
 
 
   def new
+    @products = Product.all
   end
 
   def create
   	@post = Post.new post_params
   	@post.user_id = current_user.id
-
   	if @post.save
   	  flash[:success] = "Create post successfully!"
       redirect_to root_path
@@ -33,7 +33,7 @@ class PostsController < ApplicationController
 
   private
   def post_params
-  	params.require(:post).permit :title, :content, :image
+  	params.require(:post).permit :title, :content, :image, :product_id
   end
 
   def load_post
@@ -42,7 +42,7 @@ class PostsController < ApplicationController
   		flash[:danger] = "Post not found!"
   		redirect_to root_path
   	end
-  	
+
   end
 
 end

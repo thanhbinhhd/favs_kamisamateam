@@ -6,7 +6,7 @@
 
   <div class="w3-justify">
     <div class="w3-padding-16 post-index-image">
-      <div class="image-name"><%= image_name = post.image %></div>
+      <div class="image-name"><%= image_name = post.image.url %></div>
       <%= image_tag(image_name) %>
     </div>
     <p><%= post.content %></p>

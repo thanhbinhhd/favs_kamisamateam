@@ -4,7 +4,7 @@ class UsersController < ApplicationController
 
   def index
     @farmers = User.load_farmers.paginate(page: params[:page],
-      per_page: Settings.page_farmer_size).order(id: :desc)
+      per_page: Settings.page_farmer_size).order(id: :asc)
   end
 
   def show
