@@ -1,0 +1,19 @@
+<div class="w3-white w3-margin">
+  <div class="w3-container w3-padding w3-black">
+    <h4>人気がある投稿</h4>
+  </div>
+  <ul class="w3-ul w3-hoverable w3-white">
+    <% popular_posts.each do |post| %>
+      <li class="w3-padding-16">
+        <div class="image-name"><%= image_name = post.image.url %></div>
+        <div class="w3-left w3-margin-right" style="width:150px">
+          <%= link_to image_tag(image_name), post_path(post) %>
+        </div>
+        <span class="w3-large"><strong><%= post.user.name %></strong>さん</span>
+        <br>
+        <span><%= post.title %></span>
+      </li>
+    <% end %>
+  </ul>
+</div>
+<hr>

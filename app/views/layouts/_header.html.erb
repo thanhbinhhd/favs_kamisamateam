@@ -27,6 +27,12 @@
         <% if user_signed_in? %>
           <li>
             <div class="home">
+              <%= link_to t("profile"), current_user,
+                "data-turbolinks":"false", class: "pmd-ripple-effect" %>
+            </div>
+          </li>
+          <li>
+            <div class="home">
               <%= link_to t("log-out"), destroy_user_session_path, method: :delete %>
             </div>
           </li>

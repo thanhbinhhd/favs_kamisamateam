@@ -18,5 +18,7 @@ class PagesController < ApplicationController
   def load_data
     @posts = Post.all.order(id: :desc)
     @products = Product.all
+    @farmers = User.load_farmers
+    @popular_posts = Post.all.limit Settings.limit_popular_posts
   end
 end

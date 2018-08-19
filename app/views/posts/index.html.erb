@@ -9,7 +9,7 @@
       <% @posts.each do |post| %>
         <li class="article-new">
           <div class="image-name"><%= image_name = post.image.url %></div>
-          <%= link_to image_tag(image_name), "#" %>
+          <%= link_to image_tag(image_name), post_path(post) %>
           <h2 class="articlelist-title">
             <strong><%= post.title %></strong>
           </h2>
