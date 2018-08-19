@@ -4,3 +4,4 @@ page_post_size: 6
 load_more_comment_size: 2
 load_more_reply_comment_size: 2
 length_comment: 80
+search_objects: ["Product", "User"]

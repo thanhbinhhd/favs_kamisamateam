@@ -9,3 +9,6 @@ en:
     post_title: "タイトル"
     post_content: "内容"
     you_mind: "さん一今なにしている？"
+  searches:
+    users: "ユーザー"
+    products: "農産物"
