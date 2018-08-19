@@ -16,6 +16,7 @@ class PagesController < ApplicationController
   end
 
   def load_data
-    @posts = Post.all
+    @posts = Post.all.order(id: :desc)
+    @products = Product.all
   end
 end

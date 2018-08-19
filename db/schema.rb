@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_08_15_083942) do
+ActiveRecord::Schema.define(version: 2018_07_25_022422) do
 
   create_table "activities", force: :cascade do |t|
     t.integer "user_id"
@@ -47,6 +47,7 @@ ActiveRecord::Schema.define(version: 2018_08_15_083942) do
   create_table "posts", force: :cascade do |t|
     t.string "title"
     t.integer "user_id"
+    t.integer "product_id"
     t.string "image"
     t.string "content"
     t.string "product_quantity"
@@ -54,13 +55,6 @@ ActiveRecord::Schema.define(version: 2018_08_15_083942) do
     t.integer "comment_number"
     t.integer "like_number"
     t.string "video"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "product_posts", force: :cascade do |t|
-    t.integer "product_id"
-    t.integer "post_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -100,7 +94,7 @@ ActiveRecord::Schema.define(version: 2018_08_15_083942) do
     t.string "avatar"
     t.string "address"
     t.string "phone"
-    t.datetime "birthday", default: "2018-08-18 15:49:22"
+    t.datetime "birthday", default: "2018-08-19 08:28:18"
     t.string "role", default: "User"
     t.integer "sex", default: 0
     t.integer "new_notification", default: 0

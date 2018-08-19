@@ -1,5 +1,11 @@
 en:
   load_more: "もっと読み込む"
+  user:
+    list_posts: "さんの投稿一覧"
   post_action:
     like: "高評価"
     dislike: "低評価"
+    new_post: "新しい投稿"
+    post_title: "タイトル"
+    post_content: "内容"
+    you_mind: "さん一今なにしている？"
