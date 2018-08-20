@@ -1,7 +1,7 @@
 <br><br>
 <div class="user-edit">
   <div class="container">
-    <h2>Change information</h2>
+    <h2><%= t "user.change_information.title" %></h2>
 
     <%= form_for @user do |f| %>
       <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 user-edit-left">
@@ -14,32 +14,32 @@
       <div class="col-lg-8 col-md-8 col-sm-6 col-xs-12 user-edit-right">
         <%= render "shared/error_messages", object: @user %>
         <div class="field">
-          <%= f.label :name %><br />
+          <%= f.label t "user.change_information.name" %><br />
           <%= f.text_field :name, autofocus: true,
             class: "form-control" %>
         </div>
 
         <div class="field">
-          <%= f.label :birthday %><br />
+          <%= f.label t "user.change_information.birthday" %><br />
           <%= f.date_field :birthday, class: "form-control" %>
         </div>
 
         <div class="field">
-          <%= f.label :sex, "Sex: "  %>
+          <%= f.label t "user.change_information.sex"  %>
           <label>
             <%= f.radio_button :sex, "male", checked: true %>
-            <span>Male</span>
+            <span><%= t "user.change_information.male"  %></span>
           </label>
 
           <label>
             <%= f.radio_button :sex, "female" %>
-            <span>Female</span>
+            <span><%= t "user.change_information.female"  %></span>
           </label>
         </div>
 
         <div class="actions">
-          <%= link_to "Cancel", @user, class: "btn btn-danger" %>
-          <%= f.button "Save change", class: "btn btn-primary",
+          <%= link_to t("user.change_information.cancel"), @user, class: "btn btn-danger" %>
+          <%= f.button t("user.change_information.save_change"), class: "btn btn-primary",
             data: {disable_with: "<i class='fa fa-spinner fa-spin'></i>
             Changing..."} %>
         </div>
