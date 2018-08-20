@@ -2,6 +2,25 @@ en:
   load_more: "もっと読み込む"
   user:
     list_posts: "さんの投稿一覧"
+    change_information:
+      title: "アカウント情報の変更"
+      name: "名前"
+      birthday: "生年月日"
+      sex: "性別: "
+      male: "男"
+      female: "女"
+      cancel: "キャンセル"
+      save_change: "変更保存"
+    change_password:
+      title: "アカウントパスワードの変更"
+      current_password: "現在のパスワード"
+      current_password_placeholder: "現在のパスワードを入力してください"
+      new_password: "新しいパスワード"
+      new_password_placeholder: "新しいパスワードを入力してください"
+      password_confirmation: "新しいパスワードの確認"
+      password_confirmation_placeholder: "新しいパスワードの確認を入力してください"
+      back: "戻る"
+      button_change: "パスワードの変更"
   post_action:
     like: "高評価"
     dislike: "低評価"
