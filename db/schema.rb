@@ -94,7 +94,7 @@ ActiveRecord::Schema.define(version: 2018_07_25_022422) do
     t.string "avatar"
     t.string "address"
     t.string "phone"
-    t.datetime "birthday", default: "2018-08-19 08:28:18"
+    t.datetime "birthday", default: "2018-08-20 03:38:01"
     t.string "role", default: "User"
     t.integer "sex", default: 0
     t.integer "new_notification", default: 0
